@@ -1,0 +1,566 @@
+{
+  "build": "web-cdn-v11",
+  "cdn_base": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/",
+  "images": [
+    {
+      "id": "hero",
+      "path": "assets/v1/hero.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/hero.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "world-map",
+      "path": "assets/v1/world-map.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/world-map.webp",
+      "width": 1700,
+      "height": 1133
+    },
+    {
+      "id": "hero-thumb",
+      "path": "assets/v1/hero-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/hero-thumb.webp",
+      "width": 800,
+      "height": 450
+    },
+    {
+      "id": "world-map-thumb",
+      "path": "assets/v1/world-map-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/world-map-thumb.webp",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "id": "map-lake",
+      "path": "assets/v1/map-lake.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-lake.webp",
+      "width": 730,
+      "height": 589
+    },
+    {
+      "id": "map-academy",
+      "path": "assets/v1/map-academy.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-academy.webp",
+      "width": 695,
+      "height": 600
+    },
+    {
+      "id": "map-court",
+      "path": "assets/v1/map-court.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-court.webp",
+      "width": 538,
+      "height": 550
+    },
+    {
+      "id": "map-travel",
+      "path": "assets/v1/map-travel.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-travel.webp",
+      "width": 864,
+      "height": 499
+    },
+    {
+      "id": "map-treasures",
+      "path": "assets/v1/map-treasures.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-treasures.webp",
+      "width": 710,
+      "height": 576
+    },
+    {
+      "id": "map-chaos",
+      "path": "assets/v1/map-chaos.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-chaos.webp",
+      "width": 692,
+      "height": 600
+    },
+    {
+      "id": "map-forge",
+      "path": "assets/v1/map-forge.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-forge.webp",
+      "width": 652,
+      "height": 537
+    },
+    {
+      "id": "map-garden",
+      "path": "assets/v1/map-garden.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/map-garden.webp",
+      "width": 864,
+      "height": 589
+    },
+    {
+      "id": "ui-portraits",
+      "path": "assets/v1/ui-portraits.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-portraits.webp",
+      "width": 1576,
+      "height": 759
+    },
+    {
+      "id": "ui-portraits-thumb",
+      "path": "assets/v1/ui-portraits-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-portraits-thumb.webp",
+      "width": 520,
+      "height": 251
+    },
+    {
+      "id": "ui-academy",
+      "path": "assets/v1/ui-academy.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-academy.webp",
+      "width": 1269,
+      "height": 750
+    },
+    {
+      "id": "ui-academy-thumb",
+      "path": "assets/v1/ui-academy-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-academy-thumb.webp",
+      "width": 520,
+      "height": 307
+    },
+    {
+      "id": "ui-progression",
+      "path": "assets/v1/ui-progression.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-progression.webp",
+      "width": 686,
+      "height": 810
+    },
+    {
+      "id": "ui-progression-thumb",
+      "path": "assets/v1/ui-progression-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-progression-thumb.webp",
+      "width": 356,
+      "height": 420
+    },
+    {
+      "id": "ui-grail",
+      "path": "assets/v1/ui-grail.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-grail.webp",
+      "width": 1109,
+      "height": 790
+    },
+    {
+      "id": "ui-grail-thumb",
+      "path": "assets/v1/ui-grail-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-grail-thumb.webp",
+      "width": 520,
+      "height": 370
+    },
+    {
+      "id": "ui-collection",
+      "path": "assets/v1/ui-collection.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-collection.webp",
+      "width": 1019,
+      "height": 590
+    },
+    {
+      "id": "ui-collection-thumb",
+      "path": "assets/v1/ui-collection-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-collection-thumb.webp",
+      "width": 520,
+      "height": 301
+    },
+    {
+      "id": "ui-map",
+      "path": "assets/v1/ui-map.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-map.webp",
+      "width": 641,
+      "height": 428
+    },
+    {
+      "id": "ui-map-thumb",
+      "path": "assets/v1/ui-map-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-map-thumb.webp",
+      "width": 520,
+      "height": 347
+    },
+    {
+      "id": "ui-knights",
+      "path": "assets/v1/ui-knights.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-knights.webp",
+      "width": 1075,
+      "height": 756
+    },
+    {
+      "id": "ui-knights-thumb",
+      "path": "assets/v1/ui-knights-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-knights-thumb.webp",
+      "width": 520,
+      "height": 366
+    },
+    {
+      "id": "ui-portraits2",
+      "path": "assets/v1/ui-portraits2.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-portraits2.webp",
+      "width": 1253,
+      "height": 770
+    },
+    {
+      "id": "ui-portraits2-thumb",
+      "path": "assets/v1/ui-portraits2-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-portraits2-thumb.webp",
+      "width": 520,
+      "height": 320
+    },
+    {
+      "id": "ui-items",
+      "path": "assets/v1/ui-items.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-items.webp",
+      "width": 1235,
+      "height": 922
+    },
+    {
+      "id": "ui-items-thumb",
+      "path": "assets/v1/ui-items-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-items-thumb.webp",
+      "width": 520,
+      "height": 388
+    },
+    {
+      "id": "ui-events",
+      "path": "assets/v1/ui-events.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-events.webp",
+      "width": 1066,
+      "height": 576
+    },
+    {
+      "id": "ui-events-thumb",
+      "path": "assets/v1/ui-events-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-events-thumb.webp",
+      "width": 520,
+      "height": 281
+    },
+    {
+      "id": "ui-battle",
+      "path": "assets/v1/ui-battle.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-battle.webp",
+      "width": 374,
+      "height": 311
+    },
+    {
+      "id": "ui-battle-thumb",
+      "path": "assets/v1/ui-battle-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-battle-thumb.webp",
+      "width": 374,
+      "height": 311
+    },
+    {
+      "id": "ui-cavalry",
+      "path": "assets/v1/ui-cavalry.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-cavalry.webp",
+      "width": 357,
+      "height": 248
+    },
+    {
+      "id": "ui-cavalry-thumb",
+      "path": "assets/v1/ui-cavalry-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-cavalry-thumb.webp",
+      "width": 357,
+      "height": 248
+    },
+    {
+      "id": "ui-character",
+      "path": "assets/v1/ui-character.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-character.webp",
+      "width": 1071,
+      "height": 567
+    },
+    {
+      "id": "ui-character-thumb",
+      "path": "assets/v1/ui-character-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-character-thumb.webp",
+      "width": 520,
+      "height": 275
+    },
+    {
+      "id": "ui-gifts",
+      "path": "assets/v1/ui-gifts.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-gifts.webp",
+      "width": 874,
+      "height": 445
+    },
+    {
+      "id": "ui-gifts-thumb",
+      "path": "assets/v1/ui-gifts-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-gifts-thumb.webp",
+      "width": 520,
+      "height": 265
+    },
+    {
+      "id": "ui-legions",
+      "path": "assets/v1/ui-legions.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-legions.webp",
+      "width": 1106,
+      "height": 777
+    },
+    {
+      "id": "ui-legions-thumb",
+      "path": "assets/v1/ui-legions-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-legions-thumb.webp",
+      "width": 520,
+      "height": 365
+    },
+    {
+      "id": "ui-systems",
+      "path": "assets/v1/ui-systems.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-systems.webp",
+      "width": 533,
+      "height": 738
+    },
+    {
+      "id": "ui-systems-thumb",
+      "path": "assets/v1/ui-systems-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/ui-systems-thumb.webp",
+      "width": 303,
+      "height": 420
+    },
+    {
+      "id": "cover-m13",
+      "path": "assets/v1/cover-m13.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m13.webp",
+      "width": 1050,
+      "height": 788
+    },
+    {
+      "id": "cover-m13-thumb",
+      "path": "assets/v1/cover-m13-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m13-thumb.webp",
+      "width": 520,
+      "height": 390
+    },
+    {
+      "id": "cover-m1",
+      "path": "assets/v1/cover-m1.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m1.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m1-thumb",
+      "path": "assets/v1/cover-m1-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m1-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m2",
+      "path": "assets/v1/cover-m2.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m2.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m2-thumb",
+      "path": "assets/v1/cover-m2-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m2-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m7",
+      "path": "assets/v1/cover-m7.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m7.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m7-thumb",
+      "path": "assets/v1/cover-m7-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m7-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m8",
+      "path": "assets/v1/cover-m8.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m8.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m8-thumb",
+      "path": "assets/v1/cover-m8-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m8-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m9",
+      "path": "assets/v1/cover-m9.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m9.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m9-thumb",
+      "path": "assets/v1/cover-m9-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m9-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m20",
+      "path": "assets/v1/cover-m20.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m20.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m20-thumb",
+      "path": "assets/v1/cover-m20-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m20-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m18",
+      "path": "assets/v1/cover-m18.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m18.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m18-thumb",
+      "path": "assets/v1/cover-m18-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m18-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m3",
+      "path": "assets/v1/cover-m3.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m3.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m3-thumb",
+      "path": "assets/v1/cover-m3-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m3-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m4",
+      "path": "assets/v1/cover-m4.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m4.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m4-thumb",
+      "path": "assets/v1/cover-m4-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m4-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m5",
+      "path": "assets/v1/cover-m5.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m5.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m5-thumb",
+      "path": "assets/v1/cover-m5-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m5-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m6",
+      "path": "assets/v1/cover-m6.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m6.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m6-thumb",
+      "path": "assets/v1/cover-m6-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m6-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m10",
+      "path": "assets/v1/cover-m10.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m10.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m10-thumb",
+      "path": "assets/v1/cover-m10-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m10-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m12",
+      "path": "assets/v1/cover-m12.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m12.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m12-thumb",
+      "path": "assets/v1/cover-m12-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m12-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m15",
+      "path": "assets/v1/cover-m15.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m15.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m15-thumb",
+      "path": "assets/v1/cover-m15-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m15-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m16",
+      "path": "assets/v1/cover-m16.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m16.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m16-thumb",
+      "path": "assets/v1/cover-m16-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m16-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m17",
+      "path": "assets/v1/cover-m17.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m17.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m17-thumb",
+      "path": "assets/v1/cover-m17-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m17-thumb.webp",
+      "width": 520,
+      "height": 293
+    },
+    {
+      "id": "cover-m19",
+      "path": "assets/v1/cover-m19.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m19.webp",
+      "width": 1050,
+      "height": 591
+    },
+    {
+      "id": "cover-m19-thumb",
+      "path": "assets/v1/cover-m19-thumb.webp",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m19-thumb.webp",
+      "width": 520,
+      "height": 293
+    }
+  ]
+}
