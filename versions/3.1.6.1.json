@@ -1,0 +1,102 @@
+{
+  "id": "v3161",
+  "version": "3.1.6.1",
+  "date": "2026-11-14",
+  "source": "作者提供的 V3.1.6.1 公告（日期为网站收录日）",
+  "related": [
+    "m2",
+    "m12"
+  ],
+  "zh": {
+    "title": "泉水之龙",
+    "eyebrow": "本版更新",
+    "headline": "血脉的觉醒，如今有了新的模样。",
+    "summary": "当华夏传承与泉水血脉相遇，符合资格的角色会显现与特征、身份对应的龙角；泉水之裔前四阶段拥有不同角型，传说职业则拥有各自的成熟角配色。",
+    "tagline": "华夏龙角、四阶段角型、职业配色与显示范围规则。",
+    "sections": [
+      {
+        "heading": "泉水之裔：血脉有了可见之形",
+        "paragraphs": [
+          "拥有对应泉水血脉或传说职业，且文化保留华夏传承的角色，可以显现与自身身份相应的龙角。泉水之裔前四阶段拥有不同角型；泉水圣女、战争侍女、骑士与战神拥有各自的成熟角配色。",
+          "龙角由特征与身份决定，不需要装备，也不提供额外属性加成。职业对应的性别限制仍然有效。"
+        ]
+      },
+      {
+        "heading": "儿童不再受18岁门槛限制",
+        "paragraphs": [
+          "本版不设18岁显示门槛，符合条件的儿童也可以显示对应龙角；儿童目前沿用现有角型。",
+          "角色不会仅因为年龄增长而自动升级角型，形态仍取决于当前特征与身份。"
+        ]
+      },
+      {
+        "heading": "游戏规则：六种显示范围",
+        "paragraphs": [
+          "进入游戏规则「圣泉传说：泉水之龙」，可选择关闭、仅当前玩家、当前玩家家庭、当前玩家宗族、历代玩家宗族保留，或所有符合条件者；默认「当前玩家宗族」。",
+          "当前玩家宗族随操控角色转移；选择「历代玩家宗族（保留）」时，开局及切换角色会登记玩家所属宗族，此前登记的宗族继续保留显示资格。",
+          "家庭包含本人、配偶、父母、子女、兄弟姐妹。显示范围只限定候选角色，仍须满足对应特征、华夏传承和职业性别要求。"
+        ]
+      },
+      {
+        "heading": "启用前置：泉水之裔外貌",
+        "paragraphs": [
+          "必须先在「外貌与特征」中开启「泉水之裔外貌」，龙角规则才会生效。原有泉水外貌效果保持。",
+          "V3.1.6.1 仅包含泉水之龙及相关规则，不包括仍在开发中的其他机制。"
+        ]
+      },
+      {
+        "heading": "已知限制：穿模与旧档仍待测试",
+        "paragraphs": [
+          "部分华夏高髻或冠饰可能遮挡、穿插龙角；儿童暂时沿用现有角型，实机适配仍需继续调整。",
+          "建议优先在新档体验。旧档首次启用、继承、存读档显示和历代玩家宗族保留的表现仍待实测，暂不承诺全部旧档场景兼容。"
+        ]
+      }
+    ],
+    "warning": "必须先开启「泉水之裔外貌」。龙角只改变外观、不增加属性；高髻与冠饰可能穿模，旧档兼容性尚待实测。"
+  },
+  "en": {
+    "title": "Spring Dragon",
+    "eyebrow": "Latest release",
+    "headline": "The awakening bloodline has a new appearance.",
+    "summary": "Eligible Chinese-heritage characters with the relevant spring bloodline or legendary profession can now display dragon horns selected by trait and identity.",
+    "tagline": "Four bloodline horn forms, legendary-role colors, and visibility rules.",
+    "sections": [
+      {
+        "heading": "Dragon horns for eligible Chinese-heritage characters",
+        "paragraphs": [
+          "Eligible characters with the appropriate spring bloodline or legendary profession, and the required Chinese cultural heritage, may display dragon horns suited to their identity. The first four Spring Descendant stages have distinct forms; Spring Maidens, War Maidens, Knights, and War Gods have their own mature-horn colors.",
+          "Horns are cosmetic, follow traits and roles, require no equipment and provide no bonus attributes. Profession-specific gender requirements still apply."
+        ]
+      },
+      {
+        "heading": "Children may display horns, but age alone does not upgrade them",
+        "paragraphs": [
+          "There is no minimum display age of 18 in this release. Eligible children can display the existing horn forms.",
+          "Horn type is selected from traits and identity, not automatically upgraded as the character grows older."
+        ]
+      },
+      {
+        "heading": "Six visibility choices in the game rules",
+        "paragraphs": [
+          "Under Game Rules, find 'Sacred Spring: Spring Dragon'. Choose Disabled, Current Player Only, Current Player's Family, Current Player's Dynasty, Previous Player Dynasties (Retained), or All Eligible Characters. The default is Current Player's Dynasty.",
+          "The current-player-dynasty scope follows the controlled character. Under the retained-dynasties choice, the player's dynasty is registered at game start and on character switches, with previously registered dynasties remaining eligible.",
+          "Family scope includes the character, spouse, parents, children and siblings. Each character must still satisfy their traits, Chinese heritage and any profession-specific gender requirements."
+        ]
+      },
+      {
+        "heading": "Required appearance option",
+        "paragraphs": [
+          "First enable 'Spring Descendant Appearance' under 'Appearance & Traits'. Only then will the Spring Dragon rule take effect. Existing Spring Descendant appearance effects remain intact.",
+          "V3.1.6.1 includes the Spring Dragon feature and related rules only; other mechanics still in development are excluded."
+        ]
+      },
+      {
+        "heading": "Visual limits and save compatibility",
+        "paragraphs": [
+          "Some Chinese high hairstyles and crowns may obscure or intersect the horns. Children currently use the existing horn forms and may need more fitting adjustments.",
+          "Trying the feature in a new save is recommended. First-time activation in an old save, succession, save/reload display and retained prior-player dynasty behavior remain unverified; full old-save compatibility is not promised."
+        ]
+      }
+    ],
+    "warning": "Enable Spring Descendant Appearance first. Horns are cosmetic only. Some hairstyles and headwear may clip; older-save scenarios remain unverified."
+  }
+}

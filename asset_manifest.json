@@ -1,5 +1,5 @@
 {
-  "build": "web-cdn-v11",
+  "build": "web-cdn-v12-dragon-v3161",
   "cdn_base": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/",
   "images": [
     {
@@ -561,6 +561,13 @@
       "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/v1/cover-m19-thumb.webp",
       "width": 520,
       "height": 293
+    },
+    {
+      "id": "ui-dragon-horns",
+      "path": "assets/releases/3.1.6.1/dragon-horns-gallery.avif",
+      "url": "https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@main/assets/releases/3.1.6.1/dragon-horns-gallery.avif",
+      "width": 720,
+      "height": 480
     }
   ]
 }

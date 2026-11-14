@@ -52,6 +52,18 @@ This repository contains the **bilingual showcase website and public-facing visu
 
 ---
 
+## 当前版本 / Current Release
+
+**V3.1.6.1「泉水之龙」 / Spring Dragon (2026-11-14)**
+
+- 新增华夏传承的泉水之裔与传说职业龙角外观；龙角无额外属性，角型取决于特征和身份。
+- 新增游戏规则显示范围；必须先启用「外貌与特征 → 泉水之裔外貌」。
+- 儿童无 18 岁显示门槛，但角型不随年龄自动升级；旧档、继承及冠饰适配仍需实机验证。
+- [查看版本更新目录 / Version history](versions/README.md) · [V3.1.6.1 完整公告 / Full release note](versions/3.1.6.1.md) · [八图实机展示 / In-game collage](assets/releases/3.1.6.1/dragon-horns-gallery.avif)。
+- **V3.1.6 和 V3.1.5 原公告均保留**，网站首页只展示最新两版，全部历史版本在独立版本目录中查看。
+
+**Important:** The GitHub repository stores source files and public assets. Updating GitHub does **not** automatically publish changes to the Muse-hosted live site.
+
 ## 网站资源 / Website Assets
 
 - `index.html` — 中英文介绍网站 / bilingual project website.

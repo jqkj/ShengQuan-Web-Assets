@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "current": "3.1.6.1",
+  "ordering": "newest-first",
+  "entries": [
+    {
+      "version": "3.1.6.1",
+      "date": "2026-11-14",
+      "date_type": "site-entry",
+      "id": "v3161",
+      "title_zh": "泉水之龙",
+      "title_en": "Spring Dragon",
+      "document": "versions/3.1.6.1.md",
+      "gallery": "assets/releases/3.1.6.1/dragon-horns-gallery.avif"
+    },
+    {
+      "version": "3.1.6",
+      "date": "2026-11-01",
+      "id": "v316",
+      "title_zh": "余烬不熄",
+      "title_en": "Embers Endure",
+      "document": "versions/3.1.6.md"
+    },
+    {
+      "version": "3.1.5",
+      "date": "2026-10-18",
+      "id": "update315",
+      "title_zh": "圣泉功业与精钢军械",
+      "title_en": "Sacred Spring Deeds & Refined Steel",
+      "document": "versions/3.1.5.md"
+    }
+  ]
+}
