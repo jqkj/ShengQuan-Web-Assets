@@ -65,3 +65,5 @@
 .ck3-flat-reference figcaption code{font-size:10px;line-height:1.6;color:#587382;overflow-wrap:anywhere;white-space:normal}
 @media(max-width:900px){.ck3-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.ck3-reference-section{padding:22px 16px}.ck3-reference-grid{gap:9px}.ck3-flat-reference{padding:12px}.ck3-flat-image{width:58px;height:58px}.ck3-flat-image img{width:46px;height:46px}}
+
+.ck3-reference-subheading{font:600 18px var(--serif);color:#577181;border-bottom:1px solid #d8e3e3;padding-bottom:9px;margin:22px 0 13px}

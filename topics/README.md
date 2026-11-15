@@ -23,8 +23,13 @@
 - 总目录现在支持搜索与 5 组筛选，保留原有 35 个独立 HTML 页面。未改动游戏仓库、没有自动发布 Muse。
 
 ## CK3 扁平 UI PNG 资源（2026-11-15）
-- assets/ck3-ui/flat/：从用户 Drive flat_icons 目录选取四张真实 60×60 透明 PNG，网页在资源词典及专题首页展示。
+- assets/ck3-ui/flat/：从用户 Drive flat_icons 目录选取首批四张真实 60×60 透明 PNG，网页在资源词典及专题首页展示。
 - 对照 jesec/ck3-mod-base@master/base/game/gfx/interface/icons/flat_icons/ 下 prestige、piety、time、treasury 的同名 DDS 元数据。
 - 这些是通用界面剪影，不是 @prestige_icon! 或 @piety_icon! 等文本注册宏引用的彩色图；11 项宏仍用本站自绘 SVG。
 - PNG 与 DDS 只确认文件命名与视觉用途，没有进行二进制同一性验证；版权仍属 Paradox Interactive AB，非商业展示不等同再分发授权。
 - 根目录单 HTML 主站保持独立，不新增多文件 PNG 依赖；Muse 与多页 topics/ 仍需分别发布。
+
+### 第二批 CK3 UI 图标对照
+- 在相同 flat_icons 目录增补 8 个系统图标：faith、holy_order、culture、dynasty、county_control、development、army、council。
+- 资源词典现在按“资源与时间”（4 项）和“领地、信仰与军事系统”（8 项）分组，共 12 张。首页仅展示前 4 张，避免挤占专题导航。
+- 原版 GUI @texticon! 词典仍独立计 11 项；新增图像没有宣称等于对应的彩色文本宏。

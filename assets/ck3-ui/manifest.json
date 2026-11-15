@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "kind": "CK3 flat UI image samples, not texticon macro assets",
   "copyright": "Crusader Kings III © Paradox Interactive AB",
   "source": "User-provided Google Drive flat_icons",
@@ -8,6 +8,7 @@
     {
       "png": "flat/prestige.png",
       "game_dds": "gfx/interface/icons/flat_icons/prestige.dds",
+      "group": "resource",
       "width": 60,
       "height": 60,
       "same_as_texticon_macro": false
@@ -15,6 +16,7 @@
     {
       "png": "flat/piety.png",
       "game_dds": "gfx/interface/icons/flat_icons/piety.dds",
+      "group": "resource",
       "width": 60,
       "height": 60,
       "same_as_texticon_macro": false
@@ -22,6 +24,7 @@
     {
       "png": "flat/time.png",
       "game_dds": "gfx/interface/icons/flat_icons/time.dds",
+      "group": "resource",
       "width": 60,
       "height": 60,
       "same_as_texticon_macro": false
@@ -29,6 +32,71 @@
     {
       "png": "flat/treasury.png",
       "game_dds": "gfx/interface/icons/flat_icons/treasury.dds",
+      "group": "resource",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/faith.png",
+      "game_dds": "gfx/interface/icons/flat_icons/faith.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/holy_order.png",
+      "game_dds": "gfx/interface/icons/flat_icons/holy_order.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/culture.png",
+      "game_dds": "gfx/interface/icons/flat_icons/culture.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/dynasty.png",
+      "game_dds": "gfx/interface/icons/flat_icons/dynasty.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/county_control.png",
+      "game_dds": "gfx/interface/icons/flat_icons/county_control.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/development.png",
+      "game_dds": "gfx/interface/icons/flat_icons/development.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/army.png",
+      "game_dds": "gfx/interface/icons/flat_icons/army.dds",
+      "group": "system",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/council.png",
+      "game_dds": "gfx/interface/icons/flat_icons/council.dds",
+      "group": "system",
       "width": 60,
       "height": 60,
       "same_as_texticon_macro": false
