@@ -15,17 +15,17 @@
 
 ## CK3 官方资源与圣泉自定义图标（2026-11-15）
 
-- `resources.html`：图标对照词典；`theme.js`：全站通用资源标签、数值前的小图标、专题查询与状态筛选；`style.css`：轻量 Wiki 风格视觉。
+- `resources.html`：图标对照词典；`theme.js`：全站通用资源标签、数值前的小图标、专题查询与分类筛选；`style.css`：轻量 Wiki 风格视觉。
 - 本体图标注册在 `jesec/ck3-mod-base@master/base/game/gui/texticons.gui`、`texticons_religion.gui`；功业自定义纹样注册在 `jqkj/CK3-ShengQuan-Legend@22f201537364fbf2a1182abc43ca00d07b1f93ed/gui/jic_oath_board_texticons.gui`。
 - base 仓库的 DDS 是二进制元数据占位文件（例如 `icon_gold.dds` 内容是 JSON 元数据），不能直接当作网页图像；没有在公开站点中转存游戏官方贴图。
-- 网站以**原创简化 SVG 示意图**表示实际确认过的图标宏，不声明它们就是游戏官方原图。精确效果、费用与奖励仍取自实际模组脚本与游戏确认窗口。
+- 初始版本用**原创 SVG 示意图**展示全部注册宏；自 2026-11-16 起，部分资源改为经文件名及路径核对的 CK3 PNG 预览，其余仍是原创 SVG。精确效果、费用与奖励仍以游戏为准。
 - “本文涉及资源”通过已有中文正文、资格和规则文本提及的名称生成，**不意味着会必然消耗或获取这些资源**；英译仍有待对等复审。
 - 总目录现在支持搜索与 5 组筛选，保留原有 35 个独立 HTML 页面。未改动游戏仓库、没有自动发布 Muse。
 
 ## CK3 扁平 UI PNG 资源（2026-11-15）
 - assets/ck3-ui/flat/：从用户 Drive flat_icons 目录选取首批四张真实 60×60 透明 PNG，网页在资源词典及专题首页展示。
 - 对照 jesec/ck3-mod-base@master/base/game/gfx/interface/icons/flat_icons/ 下 prestige、piety、time、treasury 的同名 DDS 元数据。
-- 这些是通用界面剪影，不是 @prestige_icon! 或 @piety_icon! 等文本注册宏引用的彩色图；11 项宏仍用本站自绘 SVG。
+- 这 12 张是通用界面剪影，不等同于 @prestige_icon!、@piety_icon! 等文本注册宏所用彩色贴图。资源宏现为四张 PNG + 其余原创 SVG 回退。
 - PNG 与 DDS 只确认文件命名与视觉用途，没有进行二进制同一性验证；版权仍属 Paradox Interactive AB，非商业展示不等同再分发授权。
 - 根目录单 HTML 主站保持独立，不新增多文件 PNG 依赖；Muse 与多页 topics/ 仍需分别发布。
 
