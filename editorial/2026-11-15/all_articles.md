@@ -78,7 +78,7 @@
 
 战场上的功绩、身份与其他经历，会让泉水浓度在相应条件下发生变化。阶段成长并非只有晋升，衰退也属于这个系统的一部分。若你只是把它当成可以永远叠加的属性奖励，就会错过这一设计最重要的意味：力量同一个人的处境联系在一起，也会随着命运的转折重新受到衡量。
 
-管理血脉时应区分三件事：出生传播决定下一代可能从哪里开始，浓度变迁决定活着的人怎样变化，外貌显示则决定这些身份是否在肖像上显现。它们拥有不同的规则开关，并不因为你启用了其中一个，就自动开启另外两个。
+管理血脉时应区分三件事：出生传播决定下一代可能从哪里开始，浓度变迁决定活着的人怎样变化，外貌显示则决定这些身份是否在肖像上显现。三者拥有不同的规则开关：当前主模组的浓度变迁默认限于玩家近亲家庭，扩大到整个宗族须另选规则；V3.1.6.1 龙角的显示范围则默认是当前玩家宗族。肖像上出现龙角，不意味着血脉浓度已自动增长，更不代表单凭年龄就能晋阶。
 
 ## 三｜泉水之龙：让身份拥有可见的轮廓
 
@@ -92,7 +92,7 @@ V3.1.6.1 的「泉水之龙」为符合条件的华夏传承角色加入身份�
 
 ---
 
-**源码依据**：`common/scripted_effects/jic_born_effects.txt`；`common/story_cycles/quanshuizhiyi_story_cycles.txt`；V3.1.6.1 `gfx/portraits/portrait_modifiers/jic_dragon_horns.txt`、`common/game_rules/01_jic_center_game_rules.txt`。
+**源码依据**：`common/scripted_effects/jic_born_effects.txt`；`common/story_cycles/quanshuizhiyi_story_cycles.txt`；`common/game_rules/01_jic_center_game_rules.txt`；`common/scripted_triggers/jic_quanshui_triggers.txt`；V3.1.6.1 `gfx/portraits/portrait_modifiers/jic_dragon_horns.txt`、`common/game_rules/01_jic_center_game_rules.txt`。
 
 
 
@@ -111,7 +111,7 @@ V3.1.6.1 的「泉水之龙」为符合条件的华夏传承角色加入身份�
 
 ## 二｜印记的数量与等待的年数是两回事
 
-一轮约定围绕七道封印推进，但七道封印不等于固定七年走完。现行游戏规则可以选择一、五或十年等续约间隔，其中默认是五年。某些旧本地化仍保留“每七年”的历史说法，不应继续被网站照抄；具体领取时机，以当前规则和游戏界面中的倒计时为准。
+一轮约定围绕七道封印推进，但七道封印不等于固定七年走完。现行游戏规则可以选择一年、五年或十年的续约间隔，其中默认是五年。某些旧本地化仍保留“每七年”的历史说法，不应继续被网站照抄；具体领取时机，以当前规则和游戏界面中的倒计时为准。
 
 奖励可能涉及金币、威望、虔诚和相应的免费权益。得到一份免费征召机会，与增加某位人物身上的永久能力，是不同性质的回报；使用前仍须遵守对应玩法自身的资格和操作。圣泉之约既不是无限资源入口，也不会替你完成其他系统需要的人物选择。
 
@@ -474,7 +474,7 @@ V3.1.6.1 的「泉水之龙」为符合条件的华夏传承角色加入身份�
 
 领主刚刚处理完封臣的争执，国库有了少许余裕，或许只想暂时从漫长的战争计划里移开目光。泉水刮刮乐为这种时刻保留了一个轻松的入口。它同样与泉水仙女的馈赠有关，却不必被包装成决定王朝生死的神圣试炼。有时候，打开一张奖券，只是想看一看这次命运会露出怎样的表情。
 
-现有玩法围绕一轮十张奖券展开，结果依次揭晓。这并非同时展示十个奖项后让你挑走其中一个的“十选一”；在支付、使用免费权益与确认结果之前，仍须按界面展示的流程操作。奖券之间可以带来不同奖赏，但下一张并不会因为上一张平凡，就被保证一定华丽。
+现有玩法围绕一轮十张奖券展开，结果依次揭晓。按现行入口，普通轮次花费五百金币；持有有效免费次数时则使用对应权益。这并非同时展示十个奖项后让你挑走其中一个的“十选一”；在支付、使用免费权益与确认结果之前，仍须按界面展示的流程操作。奖券之间可以带来不同奖赏，但下一张并不会因为上一张平凡，就被保证一定华丽。
 
 ## 二｜奖励会进入你正在经历的生活
 
@@ -490,7 +490,7 @@ V3.1.6.1 的「泉水之龙」为符合条件的华夏传承角色加入身份�
 
 ---
 
-**源码依据**：`common/scripted_effects/jic_guaguale_effect.txt`；`localization/simp_chinese/jic_qiandao_l_simp_chinese.yml`。
+**源码依据**：`common/scripted_effects/jic_guaguale_effect.txt`；`common/customizable_localization/jic_guaguale_loc.txt`（普通轮次 500 金币或免费权益）。
 
 
 
@@ -552,7 +552,7 @@ V3.1.6.1 的「泉水之龙」为符合条件的华夏传承角色加入身份�
 
 ## 二｜兵阵中的每个人，都有不同的位置
 
-玉勇刀盾手承担稳固阵线的责任，长戟、弩手等不同兵种则提供相异的战场作用。你需要按其武器、目标和战场环境决定使用方式，而不应仅凭“天朝精锐”四字，就把每个兵种写成在所有地形、所有对手面前都没有弱点。兵种的具体数值、规模与克制关系，应由当前游戏规则和正式平衡表说明。
+龙泉的兵阵并非一支名字华丽、功能却彼此重复的军队：初阶的龙泉刀盾手守住战线，长戟兵抗击冲锋；继而加入轻骑兵与轻弩手，赋予追击和远射不同的选择；再向上，斩马刀队与重甲龙泉弩手负责更艰难的突破。高阶志向解锁俑士龙泉禁卫、天庭龙卫的神弩卫和盾戟卫，最终才迎来「崇唐」。主模组现行脚本共定义十种龙泉兵种，并由五阶家族志向依次开放招募权；它们各有地形与克制取向，不会因为冠上「天朝」之名就没有弱点。
 
 当家族逐步获得更高层次的军备，军队也会改变王朝如何经营财政。维持一支威武的禁军，比在宣传图上摆出整齐队列困难得多；战时动员、平时储备和将领配置，始终是领主必须亲自完成的工作。天朝技艺提供可能，真正的军势要在治理中被养出来。
 
@@ -574,7 +574,7 @@ V3.1.6.1 为符合条件的华夏传承泉水人物加入龙角。前四阶段�
 
 ---
 
-**源码依据**：`common/house_aspirations/jic_tgp_celestial_house_powers.txt`；`localization/simp_chinese/shengquanchuanshuo_longquan_l_simp_chinese.yml`；V3.1.6.1 `gfx/portraits/portrait_modifiers/jic_dragon_horns.txt`、`common/scripted_triggers/jic_dragon_horns_triggers.txt`。
+**源码依据**：`common/house_aspirations/jic_tgp_celestial_house_powers.txt`；`common/men_at_arms_types/jic_tianchaoyuyong_maa_types.txt`；`localization/simp_chinese/shengquanchuanshuo_longquan_l_simp_chinese.yml`；V3.1.6.1 `gfx/portraits/portrait_modifiers/jic_dragon_horns.txt`、`common/scripted_triggers/jic_dragon_horns_triggers.txt`。
 
 
 
@@ -611,7 +611,7 @@ V3.1.6.1 为符合条件的华夏传承泉水人物加入龙角。前四阶段�
 
 ---
 
-**源码依据**：`localization/simp_chinese/jic_oath_board_l_simp_chinese.yml`；`common/scripted_effects/jic_oath_board_r3_settlement_effects.txt`；`specs/008-shengquan-gongye/r3_20260924/spec.md`。
+**源码依据**：`localization/simp_chinese/jic_oath_board_l_simp_chinese.yml`；`common/scripted_guis/jic_oath_board_control_sgui.txt`；`common/scripted_effects/jic_oath_board_r3_settlement_effects.txt`；`specs/008-shengquan-gongye/r3_20260924/spec.md`。
 
 
 
