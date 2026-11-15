@@ -98,3 +98,5 @@ Large artwork is served separately. The single-file site keeps inline decorative
 **Public access is not an open-content license.** No general permission is granted to reproduce, redistribute, modify, or commercially exploit original project artwork. Third-party material remains subject to its respective rights and terms.
 
 **图标回审 / Icon audit:** [色彩图例、虔诚变体与 UI 扁平图标](topics/resources.html) · [静态检查](topics/verify-wiki.mjs)。
+
+**玩家版更新日志 / Player-readable releases:** [独立版本目录](versions/index.html) · [V3.1.6.1 泉水之龙](versions/3.1.6.1.html) · [V3.1.6 余烬不熄](versions/3.1.6.html)。

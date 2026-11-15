@@ -18,6 +18,13 @@ for(const entry of matches){
  assert.ok(html.includes('src="theme.js"'),'Missing shared JS: '+entry);
  assert.ok(html.includes('href="style.css"'),'Missing shared CSS: '+entry);
  assert.ok(html.includes('class="article"'),'Missing article content: '+entry);
+ for(const match of html.matchAll(/href="#([^"]+)"/g)){
+  assert.ok(html.includes('id="'+match[1]+'"')||html.includes('name="'+match[1]+'"'),'Broken on-page anchor '+entry+'#'+match[1]);
+ }
+ for(const match of html.matchAll(/href="((?:[.][.]\/)?[^"#]+[.]html)(?:#[^"]*)?"/g)){
+  const local=path.resolve(here,match[1]);
+  assert.ok(fs.existsSync(local),'Missing linked HTML from '+entry+': '+match[1]);
+ }
 }
 assert.equal((listing.match(/class="directory-group"/g)||[]).length,7,'Unexpected category count');
 const glossary=read('topics/resources.html');
@@ -35,7 +42,10 @@ for(const item of manifest.textures){
  assert.equal(png.readUInt32BE(16),item.dimensions[0],'PNG width mismatch');
  assert.equal(png.readUInt32BE(20),item.dimensions[1],'PNG height mismatch');
 }
+for(const rel of ['versions/index.html','versions/3.1.6.1.html','versions/3.1.6.html','versions/3.1.5.html','versions/versions.css'])assert.ok(fs.existsSync(path.join(root,rel)),'Missing version page/stylesheet '+rel);
+assert.ok(fs.existsSync(path.join(root,'assets/releases/3.1.6.1/dragon-horns-gallery.avif')),'Missing release gallery');
+assert.ok(listing.includes('id="chaos"'),'Missing Chaos directory anchor');
 const flat=JSON.parse(read('assets/ck3-ui/manifest.json'));
 assert.equal(flat.images.length,12,'Expected twelve flat UI PNGs');
 for(const item of flat.images)assert.ok(fs.existsSync(path.join(root,'assets/ck3-ui',item.png)),'Missing flat UI image '+item.png);
-console.log('PASS: 35 independent articles, 11 macros, 6 colored PNGs, 12 flat UI PNGs, category markup and JS syntax');
+console.log('PASS: 35 standalone guides, valid internal anchors and HTML links, 3 release pages, 11 macro entries, 6 colored and 12 flat PNGs');
