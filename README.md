@@ -66,6 +66,19 @@ This repository contains the **bilingual showcase website and public-facing visu
 
 ## 网站资源 / Website Assets
 
+### 独立玩法专题 / Standalone feature articles
+
+**[湖畔诸事 · 35 篇独立专题页](topics/index.html)** · [专题维护与部署说明](topics/README.md)
+
+网站现已提供 `topics/` 专题目录：30 个功能与支持主题、5 个阿斯塔特职业分别具有独立的 HTML 页面。例如 [圣泉骑士团](topics/m9.html)、[泉水血脉](topics/m2.html)、[阿斯塔特药剂师](topics/profession-apothecary.html)。每篇保留已核对的中文长文、英文旧稿、可展开的操作规则、关联主题与状态提醒。英文目前尚未完成与最新中文修订的全量同步复审。
+
+**发布注意：** 这些页面须在提供 `topics/` 与 `assets/v1/` 的多文件静态主机上部署。它们不是 Muse 上线的独立页面；现有 Muse 仍依赖仓库根目录的单文件 `index.html`，提交 GitHub 不会自动发布 Muse，也未验证 GitHub Pages 是否启用。
+
+**[Standalone feature compendium: 35 individual articles](topics/index.html)** · [Deployment notes](topics/README.md)
+
+Each article has its own HTML path, reviewed Chinese narrative and a mechanically focused appendix. English content is retained but has not been fully re-reviewed against the latest Chinese revisions. Host the `topics/` directory alongside the existing assets on a multi-file static host; changes here do not automatically deploy to Muse.
+
+
 - `index.html` — 中英文介绍网站 / bilingual project website.
 - `assets/v1/*.webp` — 网站封面、缩略图、截图与背景 / optimized covers, thumbnails, screenshots, and backgrounds.
 - `asset_manifest.json` — 图片资源路径索引 / image asset manifest.
