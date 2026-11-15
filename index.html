@@ -157,6 +157,63 @@ html{scroll-padding-top:0}.article-section,.ability,#modules,#addons{scroll-marg
 .sq-wiki-value{display:inline-flex;gap:2px;align-items:center;white-space:nowrap}
 .sq-wiki-value svg{width:16px;height:16px;display:inline-block;vertical-align:middle}
 @media(max-width:640px){.sq-wiki-resources{padding:13px 15px;margin:15px 0 21px}.sq-wiki-resources h3{font-size:16px}}
+
+/* Muse one-file guide; the new CK3 artwork is served from GitHub. */
+.sq-wiki-token{text-decoration:none;white-space:nowrap}
+.sq-wiki-token:hover,.sq-wiki-token:focus-visible{background:#eff7fa;border-color:#9bbed0}
+.sq-wiki-resources h3 a{display:inline-flex;gap:8px;align-items:center;text-decoration:none}
+.sq-wiki-resources h3 .icon{height:17px;width:17px}
+.sq-game-img{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:0 0 24px}
+.sq-game-img img{width:100%;height:100%;object-fit:contain}
+.sq-game-img svg{height:100%;width:100%}
+.sq-game-fallback[hidden]{display:none!important}
+.muse-reference,.muse-compendium{max-width:1240px}
+.muse-reference h2,.muse-guide-group h2{font:600 25px/1.4 var(--serif);color:#254b64;margin:29px 0 16px}
+.muse-reference-intro{border-left:4px solid #c5a771;background:linear-gradient(110deg,#e9f3f5,#fffaf1);padding:19px 22px;margin-bottom:18px;color:#446a7d;font-size:14px;line-height:1.9}
+.muse-reference-actions{display:flex;flex-wrap:wrap;gap:15px}
+.muse-reference-actions a{color:#276582;display:inline-flex;align-items:center;gap:6px;font-size:13px}
+.muse-reference-actions .icon{width:18px;height:18px}
+.muse-resource-grid,.muse-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.muse-resource-card{background:white;border:1px solid #d8e4e6;padding:19px;min-width:0;display:flex;flex-direction:column;gap:9px}
+.muse-resource-head{display:flex;align-items:center;gap:12px}
+.muse-resource-head .sq-game-img{width:45px;height:45px;flex-basis:45px}
+.muse-resource-head h3{font:600 21px/1.45 var(--serif);color:#2b5166}
+.muse-resource-card p,.muse-reference-explain{font-size:13px;line-height:1.85;color:#5c7887}
+.muse-resource-card small{font-size:11px;color:#9b8156}
+.muse-resource-card code,.muse-piety-grid code{font-size:11px;color:#577184;overflow-wrap:anywhere;line-height:1.5;white-space:normal}
+.muse-piety-grid,.muse-flat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:16px 0 29px}
+.muse-flat-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.muse-piety-grid figure,.muse-flat-grid figure{border:1px solid #d8e5e6;background:white;padding:14px;margin:0;display:flex;align-items:center;gap:12px;min-width:0}
+.muse-piety-grid img{width:67px;height:67px;object-fit:contain;flex:0 0 67px}
+.muse-flat-grid img{width:44px;height:44px;object-fit:contain;flex:0 0 44px;filter:invert(29%) sepia(21%) saturate(950%) hue-rotate(153deg)}
+.muse-piety-grid figcaption,.muse-flat-grid figcaption{display:flex;flex-direction:column;gap:5px;min-width:0}
+.muse-piety-grid strong,.muse-flat-grid strong{font-size:13px;color:#2c536b}
+.muse-piety-grid small,.muse-flat-grid small{font-size:10px;line-height:1.5;color:#7390a0;overflow-wrap:anywhere}
+.muse-reference-legal{font-size:11px;line-height:1.85;color:#7a8d98;margin-top:22px}
+.muse-guide-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.muse-guide-tools label{font-size:13px;font-weight:700;color:#385f74}
+.muse-guide-tools input{flex:1 1 220px;background:white;border:1px solid #bdd2db;border-radius:4px;padding:11px;min-width:0}
+.muse-guide-tools button,.muse-guide-filters button{background:#f4f8f9;border:1px solid #bdced5;color:#3e6279;border-radius:4px;padding:8px 12px;font-size:12px}
+.muse-guide-filters{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}
+.muse-guide-filters button[aria-pressed=true]{background:#255a75;color:white;border-color:#255a75}
+.muse-guide-count{font-size:12px;color:#6d8592}
+.muse-guide-empty{padding:15px;border:1px dashed #a9c4ce;background:#f4f8f8}
+.muse-guide-group{margin:31px 0 42px}
+.muse-guide-group h2{border-bottom:1px solid #d6e3e6;padding-bottom:12px}
+.muse-guide-grid article{border:1px solid #d7e3e6;background:#fff;overflow:hidden;min-width:0}
+.muse-guide-grid article a{display:flex;height:100%;flex-direction:column;text-decoration:none}
+.muse-guide-image{width:100%;height:130px;object-fit:cover}
+.muse-guide-placeholder{height:130px;background:linear-gradient(110deg,#2b5269,#7c9aad);display:grid;place-items:center}
+.muse-guide-placeholder .icon{width:64px;height:64px;color:#dcecf1}
+.muse-guide-grid article a>div:last-child{padding:16px;display:flex;gap:9px;flex-direction:column;flex:1}
+.muse-guide-grid h3{font:600 19px/1.4 var(--serif);color:#31536a}
+.muse-guide-grid p{font-size:13px;line-height:1.7;color:#5e7c8b;flex:1}
+.muse-guide-grid small{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#2a718f}
+.muse-guide-grid small .icon{width:16px;height:16px}
+@media(max-width:1120px){.desktop-nav{gap:13px}.desktop-nav a{font-size:12px}}
+@media(max-width:930px){.muse-resource-grid,.muse-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.muse-flat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.muse-piety-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.muse-resource-grid,.muse-guide-grid,.muse-flat-grid{grid-template-columns:1fr}.muse-guide-tools label{flex-basis:100%}.muse-guide-grid article a{flex-direction:row}.muse-guide-image,.muse-guide-placeholder{width:104px;height:auto;min-height:120px;flex:0 0 104px}.muse-guide-grid article a>div:last-child{padding:12px}.muse-guide-grid h3{font-size:17px}}
+
 </style></head>
 <body><button type="button" data-nav="#content" class="skip">跳到主要内容</button><div id="svg-library" hidden aria-hidden="true"></div><header class="site-header"><div class="header-inner shell" id="header"></div><div class="reading-progress" id="reading-progress" aria-hidden="true"></div></header>
 <main id="content" tabindex="-1"></main><footer class="site-footer" id="footer"></footer><button class="back-top" id="back-top" type="button" aria-label="回到顶部">↑</button><div id="toast" class="toast" role="status" hidden></div>
@@ -178,7 +235,7 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt
 const strip = s => {const t=document.createElement('template');t.innerHTML=s || '';return t.content.textContent.replace(/\s+/g,' ').trim();};
 const l = (zh,en) => lang === 'en' ? (en || zh) : zh;
 let lang='zh', current={route:'home',anchor:''}, lastView='', imageObserver=null, tocObserver=null;
-let moduleFilter='all', moduleQuery='', galleryFilter='all', iconFilter='all', iconQuery='', iconDark=false, iconSize=48;
+let museGuideFilter='all', moduleFilter='all', moduleQuery='', galleryFilter='all', iconFilter='all', iconQuery='', iconDark=false, iconSize=48;
 let activeMedia=0, searchType='all', searchTimer=0, toastTimer=0, searchIndex=null;
 const urlCache=new Map(), metrics={routes:[], decodedAssets:0, initStarted:bootStarted};
 const main=$('#content');
@@ -268,8 +325,8 @@ function blocks(items=[]){return items.map(b=>{
 function external(url,text,cls=''){return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(text)} ${icon('external-link')}</a>`;}
 function header(){
   document.documentElement.lang=lang==='en'?'en':'zh-CN';
-  $('#header').innerHTML=`<a href="#home" class="brand" aria-label="${l('圣泉传说首页','Sacred Spring home')}">${icon('grail','brand-mark')}<span><strong class="brand-name">${l('圣泉传说','SACRED SPRING')}</strong><small class="brand-en">LEGEND OF THE SACRED SPRING</small></span></a><nav class="desktop-nav" aria-label="${l('主要导航','Primary navigation')}"><a href="#modules">${l('功能玩法','Features')}</a><a href="#versions">${l('版本目录','Versions')}</a><a href="#gallery">${l('图集','Gallery')}</a><a href="#map">${l('探索地图','Explore')}</a><a href="#help">${l('安装与帮助','Help')}</a></nav><div class="header-actions"><button class="icon-btn" type="button" data-search aria-label="${l('搜索功能与能力（Ctrl+K）','Search (Ctrl+K)')}">${icon('search')}</button><button class="lang-button" type="button" data-language aria-label="${l('Switch to English full guide','Switch to Chinese')}">${l('EN','中文')}</button>${external(DATA.links.workshop,l('前往工坊','Workshop'),'button light small header-workshop')}<button class="icon-btn menu-button" type="button" data-menu aria-label="${l('打开完整目录','Open menu')}">${icon('menu')}</button></div>`;
-  $('#footer').innerHTML=`<div class="shell"><div class="footer-top"><a class="brand" href="#home">${icon('grail','brand-mark')}<span><strong class="brand-name">${l('圣泉传说','SACRED SPRING')}</strong><small class="brand-en">LEGEND OF THE SACRED SPRING</small></span></a><nav class="footer-links" aria-label="${l('页尾导航','Footer navigation')}"><a href="#modules">${l('功能玩法','Features')}</a><a href="#versions">${l('版本目录','Versions')}</a><a href="#reference">${l('资料档案','Archive')}</a><a href="#icons">${l('图标与纹样','Icons')}</a><a href="#status">${l('版本与内容包','Content status')}</a></nav></div><div class="footer-bottom"><span>${l('CK3 同人模组 · 玩家指南与版本记录','A CK3 fan mod · Player guide and release archive')}</span><span>${l('最新版本记录 V3.1.6.1 · 实际适配要求以工坊为准','Latest note V3.1.6.1 · Check the Workshop for compatibility')}</span></div></div>`;
+  $('#header').innerHTML=`<a href="#home" class="brand" aria-label="${l('圣泉传说首页','Sacred Spring home')}">${icon('grail','brand-mark')}<span><strong class="brand-name">${l('圣泉传说','SACRED SPRING')}</strong><small class="brand-en">LEGEND OF THE SACRED SPRING</small></span></a><nav class="desktop-nav" aria-label="${l('主要导航','Primary navigation')}"><a href="#modules">${l('功能玩法','Features')}</a><a href="#compendium">${l('专题全书','Compendium')}</a><a href="#versions">${l('版本目录','Versions')}</a><a href="#gallery">${l('图集','Gallery')}</a><a href="#map">${l('探索地图','Explore')}</a><a href="#help">${l('安装与帮助','Help')}</a></nav><div class="header-actions"><button class="icon-btn" type="button" data-search aria-label="${l('搜索功能与能力（Ctrl+K）','Search (Ctrl+K)')}">${icon('search')}</button><button class="lang-button" type="button" data-language aria-label="${l('Switch to English full guide','Switch to Chinese')}">${l('EN','中文')}</button>${external(DATA.links.workshop,l('前往工坊','Workshop'),'button light small header-workshop')}<button class="icon-btn menu-button" type="button" data-menu aria-label="${l('打开完整目录','Open menu')}">${icon('menu')}</button></div>`;
+  $('#footer').innerHTML=`<div class="shell"><div class="footer-top"><a class="brand" href="#home">${icon('grail','brand-mark')}<span><strong class="brand-name">${l('圣泉传说','SACRED SPRING')}</strong><small class="brand-en">LEGEND OF THE SACRED SPRING</small></span></a><nav class="footer-links" aria-label="${l('页尾导航','Footer navigation')}"><a href="#modules">${l('功能玩法','Features')}</a><a href="#versions">${l('版本目录','Versions')}</a><a href="#compendium">${l('专题全书','Compendium')}</a><a href="#resources">${l('资源词典','Resources')}</a><a href="#reference">${l('资料档案','Archive')}</a><a href="#icons">${l('图标与纹样','Icons')}</a><a href="#status">${l('版本与内容包','Content status')}</a></nav></div><div class="footer-bottom"><span>${l('CK3 同人模组 · 玩家指南与版本记录','A CK3 fan mod · Player guide and release archive')}</span><span>${l('最新版本记录 V3.1.6.1 · 实际适配要求以工坊为准','Latest note V3.1.6.1 · Check the Workshop for compatibility')}</span></div></div>`;
   $('#menu-title').textContent=l('完整目录','Site directory');$('#search-title').textContent=l('寻找玩法与能力','Find a feature or ability');$('#global-search').placeholder=l('搜索神经接口、册封、火种、学院…','Search for an ability or feature…');
 }
 function releaseCard(r,i){const t=r[lang]||r.zh;return `<a class="release-card ${i===0?'latest':''}" href="#${r.id}">${picture(i===0?'ui-dragon-horns':i===1?'map-forge':'map-travel','','release-art')}<div class="release-meta"><span class="badge ${i===0?'dark':''}">${i===0?l('最新公告','Latest announcement'):l('上一版本','Previous release')}</span><strong>V${r.version}</strong><time datetime="${r.date}">${r.date}</time></div><h3>${esc(t.title)}</h3><p>${esc(t.tagline)}</p><div class="release-bottom"><span class="release-number">V${r.version}</span><span>${l('阅读版本公告','Read release notes')} ${arrow()}</span></div></a>`;}
@@ -425,7 +482,7 @@ function topicIndexCard(id){const r=DATA.routes[id];return `<a class="index-card
 
 function renderVersions(){
  return pageHero(l('版本更新目录','Version history'),l('每一版均完整保留，更新不会覆盖历史公告。','Older release notes stay accessible instead of being overwritten.'),'news-scroll','ui-dragon-horns')
- +`<section class="section"><div class="shell"><p class="version-history-intro">${l('这里从最新版本向前回溯，保留每一版的功能、风险和当时的发布语境。现行具体玩法请阅读对应功能主题。','Browse every release from newest to oldest. Historical notes preserve their original context and limitations; consult feature guides for current behavior.')}</p><div class="release-grid">${DATA.releases.map(releaseCard).join('')}</div><p class="source-note">${l('网站仓库的 versions/ 目录同时保存各版独立文件。','Each release is also retained as a separate file in the repository’s versions/ directory.')} <a href="#announcements">${l('查看公告入口','Announcement index')}</a></p></div></section>`;
+ +`<section class="section"><div class="shell"><p class="version-history-intro">${l('这里从最新版本向前回溯，保留每一版的功能、风险和当时的发布语境。现行具体玩法请阅读对应功能主题。','Browse every release from newest to oldest. Historical notes preserve their original context and limitations; consult feature guides for current behavior.')}</p><div class="release-grid">${DATA.releases.map(releaseCard).join('')}</div><p class="source-note">${l('全部公告已在这个 Muse 单文件中可直接阅读，无需部署其他 HTML。','All release notes are readable in this single Muse HTML; no additional HTML pages are needed.')} <a href="#announcements">${l('查看公告入口','Announcement index')}</a></p></div></section>`;
 }
 function renderAnnouncements(){return pageHero(l('版本公告','Release announcements'),l('这里记录每一版改变了什么。完整的现行玩法请进入功能主题。','What changed in each release. For current gameplay, open a feature guide.'),'news-scroll','map-forge')+`<section class="section"><div class="shell"><div class="release-grid">${DATA.releases.map(releaseCard).join('')}</div><div class="index-intro"><h2>${l('查更新，还是查玩法？','Updates or gameplay?')}</h2><p>${l('公告保留发布时的语境，不会因后续改动变成新版说明书。想知道怎样使用一项功能，直接进入对应主题。','Release notes preserve their original context. Visit the feature guides for how to play.')}</p><a href="#modules" class="text-link">${l('进入功能主题','Browse features')} ${arrow()}</a></div></div></section>`;}
 
@@ -484,21 +541,92 @@ const SQ_VANILLA_RESOURCES={
  treasury:{zh:'国库',en:'Treasury',macro:'treasury_icon',shade:'#ac9762',p:'<rect x="4" y="8" width="16" height="13" rx="1"/><path d="M4 8l8 5 8-5M12 13v8M4 6h16"/>'},
  time:{zh:'冷却时间',en:'Cooldown',macro:'time_icon',shade:'#7698b1',p:'<path d="M6 3h12M6 21h12M7 4c0 6 5 6 5 8s-5 4-5 8m10-16c0 6-5 6-5 8s5 4 5 8"/>'}
 };
+/* Muse: only index.html is published; CK3 reference PNGs live on GitHub CDN. */
+const SQ_RESOURCE_CATALOG=[{"id":"gold","zh":"金币","en":"Gold","macro":"gold_icon","texture":"gfx/interface/icons/icon_gold.dds","color":"#cda852","glyph":"●","description":"王朝经营与部分互动使用的金币。","enDescription":"A widely used currency in realm management and interactions.","group":"vanilla"},{"id":"prestige","zh":"威望","en":"Prestige","macro":"prestige_icon","texture":"gfx/interface/icons/modifiers/icon_prestige_01.dds","color":"#d0ab7c","glyph":"♛","description":"角色的世俗声望；例如骑士团召集可能花费威望。","enDescription":"An individual's secular standing, potentially used to rally knights.","group":"vanilla"},{"id":"piety","zh":"虔诚","en":"Piety","macro":"piety_icon","texture":"gfx/interface/icons/modifiers/icon_piety_christian_01.dds","color":"#8caec3","glyph":"✧","description":"宗教资源；游戏根据宗教有不同的图像变体。","enDescription":"Faith-linked resource; vanilla artwork varies by religion.","group":"vanilla"},{"id":"renown","zh":"宗族威望","en":"Dynasty Renown","macro":"dynasty_prestige_icon","texture":"gfx/interface/icons/modifiers/icon_dynasty_prestige_01.dds","color":"#90bda0","glyph":"♧","description":"宗族层面的名望，不等于个人威望。","enDescription":"Dynastic reputation, distinct from personal Prestige.","group":"vanilla"},{"id":"influence","zh":"影响力","en":"Influence","macro":"influence_icon","texture":"gfx/interface/icons/modifiers/icon_influence_01.dds","color":"#b29ccb","glyph":"✦","description":"部分政体使用的政治资源，并非所有角色都拥有。","enDescription":"A political currency restricted to relevant government mechanics.","group":"vanilla"},{"id":"prowess","zh":"勇武","en":"Prowess","macro":"skill_prowess_icon","texture":"gfx/interface/icons/icon_prowess.dds","color":"#9caec7","glyph":"⚔","description":"角色的战斗能力，是属性而不是可支付货币。","enDescription":"A combat attribute, not a spendable currency.","group":"vanilla"},{"id":"treasury","zh":"国库","en":"Treasury","macro":"treasury_icon","texture":"gfx/interface/icons/icon_imperial_treasury.dds","color":"#d0b68d","glyph":"▣","description":"本体登记的国库标识，是否出现取决于政体与玩法。","enDescription":"A registered treasury icon; its use depends on government and feature.","group":"vanilla"},{"id":"time","zh":"时间与冷却","en":"Time & Cooldown","macro":"time_icon","texture":"gfx/interface/icons/icon_time.dds","color":"#9ebac7","glyph":"⌛","description":"显示年限与冷却条件，不代表可支付资源。","enDescription":"Represents time and cooldowns, not spendable resources.","group":"vanilla"},{"id":"imperialGrace","zh":"帝国恩典","en":"Imperial Grace","macro":"imperial_grace","texture":"gfx/interface/icons/icon_imperial_grace.dds","color":"#cabb85","glyph":"☼","description":"原版登记名，不可直接等同阿斯塔特战士自身的恩典储量。","enDescription":"A base-game registry; not the same as each Astartes Warrior's personal Grace.","group":"vanilla"},{"id":"oathBlood","zh":"功业血纹","en":"Oath Blood","macro":"jic_oath_board_blood_icon","texture":"gfx/interface/illustrations/jic_oath_board/blood.dds","color":"#ba6979","glyph":"◆","description":"圣泉功业的自定义图标，不是 CK3 通用货币。","enDescription":"A custom Sacred Spring commission-system icon, not a vanilla currency.","group":"mod"},{"id":"oathToken","zh":"功业印记","en":"Oath Token","macro":"jic_oath_board_token_icon","texture":"gfx/interface/illustrations/jic_oath_board/token.dds","color":"#83baaa","glyph":"◇","description":"圣泉功业的自定义图标，不是 CK3 通用货币。","enDescription":"A custom Sacred Spring commission-system icon, not a vanilla currency.","group":"mod"}];
+const SQ_COLOR_PNG={"prestige":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_prestige_01.png","piety":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_piety_christian_01.png","renown":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_dynasty_prestige_01.png","influence":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_influence_01.png"};
+const SQ_PIETY_PNG=[{"zh":"基督教／通用默认","en":"Christian / generic default","macro":"piety_icon_christian","file":"icon_piety_christian_01.png","texture":"gfx/interface/icons/modifiers/icon_piety_christian_01.dds","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_piety_christian_01.png"},{"zh":"东方宗教","en":"Eastern faiths","macro":"piety_icon_eastern","file":"icon_piety_eastern_01.png","texture":"gfx/interface/icons/modifiers/icon_piety_eastern_01.dds","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_piety_eastern_01.png"},{"zh":"道教","en":"Taoism","macro":"piety_icon_taoism","file":"icon_piety_taoism_01.png","texture":"gfx/interface/icons/modifiers/icon_piety_taoism_01.dds","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@b07ec9ce0a550b465266955369bd55b6ec2a8862/assets/ck3-ui/texticons/icon_piety_taoism_01.png"}];
+const SQ_FLAT_PNG=[{"id":"prestige","zh":"威望","en":"Prestige","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/prestige.png","texture":"gfx/interface/icons/flat_icons/prestige.dds"},{"id":"piety","zh":"虔诚","en":"Piety","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/piety.png","texture":"gfx/interface/icons/flat_icons/piety.dds"},{"id":"time","zh":"时间","en":"Time","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/time.png","texture":"gfx/interface/icons/flat_icons/time.dds"},{"id":"treasury","zh":"国库","en":"Treasury","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/treasury.png","texture":"gfx/interface/icons/flat_icons/treasury.dds"},{"id":"faith","zh":"信仰","en":"Faith","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/faith.png","texture":"gfx/interface/icons/flat_icons/faith.dds"},{"id":"holy_order","zh":"修会","en":"Holy Order","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/holy_order.png","texture":"gfx/interface/icons/flat_icons/holy_order.dds"},{"id":"culture","zh":"文化","en":"Culture","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/culture.png","texture":"gfx/interface/icons/flat_icons/culture.dds"},{"id":"dynasty","zh":"宗族","en":"Dynasty","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/dynasty.png","texture":"gfx/interface/icons/flat_icons/dynasty.dds"},{"id":"county_control","zh":"领地控制","en":"County Control","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/county_control.png","texture":"gfx/interface/icons/flat_icons/county_control.dds"},{"id":"development","zh":"发展度","en":"Development","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/development.png","texture":"gfx/interface/icons/flat_icons/development.dds"},{"id":"army","zh":"军队","en":"Army","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/army.png","texture":"gfx/interface/icons/flat_icons/army.dds"},{"id":"council","zh":"议会","en":"Council","src":"https://cdn.jsdelivr.net/gh/jqkj/ShengQuan-Web-Assets@349e01e7919f59bc6aca883630a5d724d79b4207/assets/ck3-ui/flat/council.png","texture":"gfx/interface/icons/flat_icons/council.dds"}];
+Object.assign(SQ_VANILLA_RESOURCES,{
+ imperialGrace:{zh:'帝国恩典',en:'Imperial Grace',macro:'imperial_grace',shade:'#bfa76b',p:'<circle cx="12" cy="12" r="4"/><path d="M12 1v6m0 10v6M1 12h6m10 0h6M4 4l4 4m8 8 4 4m0-16-4 4m-8 8-4 4"/>'},
+ oathBlood:{zh:'功业血纹',en:'Oath Blood',macro:'jic_oath_board_blood_icon',shade:'#bc7281',p:'<path d="M12 2C8 8 5 12 5 15a7 7 0 0 0 14 0c0-3-3-7-7-13Z"/>'},
+ oathToken:{zh:'功业印记',en:'Oath Token',macro:'jic_oath_board_token_icon',shade:'#78aba0',p:'<path d="M12 2 21 7v10l-9 5-9-5V7Z"/><path d="m12 6 5 6-5 6-5-6Z"/>'}
+});
 function sqResourceSvg(key){const r=SQ_VANILLA_RESOURCES[key];return '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="'+r.shade+'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+r.p+'</svg>';}
-function sqWikiLabel(key){const r=SQ_VANILLA_RESOURCES[key];return '<span class="sq-wiki-token" title="@'+r.macro+'!">'+sqResourceSvg(key)+'<span>'+esc(lang==='en'?r.en:r.zh)+'</span></span>';}
+
+function sqWikiImage(key){
+ const src=SQ_COLOR_PNG[key],fallback=sqResourceSvg(key);
+ if(!src)return '<span class="sq-game-img">'+fallback+'</span>';
+ return '<span class="sq-game-img"><img data-sq-icon-remote="1" src="'+esc(src)+'" width="60" height="60" loading="lazy" decoding="async" alt=""><span class="sq-game-fallback" hidden>'+fallback+'</span></span>';
+}
+function sqWikiLabel(key){
+ const r=SQ_VANILLA_RESOURCES[key];
+ return '<a class="sq-wiki-token" href="#resources:'+esc(key)+'" title="@'+esc(r.macro)+'!">'+sqWikiImage(key)+'<span>'+esc(lang==='en'?r.en:r.zh)+'</span></a>';
+}
+
 function sqWikiDecorate(route){
  const topic=DATA.routes[route]||roleById(route);
  let keys,host;
  if(route==='home'){keys=['gold','prestige','piety','renown','prowess'];host=document.querySelector('.module-tools');}
  else if(topic){host=document.querySelector('.reading-article .reading-tools');if(!host)return;
   const story=document.querySelector('.reading-article .narrative-flow');
-  const summary=((story?.textContent||'')+' '+(topic.prepare||'')+' '+(topic.caution||'')).replace(/宗族威望/g,'');
-  keys=Object.entries({gold:/金币|Gold/i,prestige:/威望|Prestige/i,piety:/虔诚|Piety/i,renown:/宗族威望|Renown/i,influence:/影响力|Influence/i,prowess:/勇武|Prowess/i,treasury:/国库储备|Treasury/i,time:/冷却|间隔|Cooldown/i}).filter(([k,re])=>re.test(k==='renown'?(story?.textContent||''):summary)).map(([k])=>k).slice(0,5);
+  const summary=(story?.textContent||'')+' '+(topic.prepare||'')+' '+(topic.caution||'');
+  keys=Object.entries({gold:/金币|Gold/i,prestige:/威望|Prestige/i,piety:/虔诚|Piety/i,renown:/宗族威望|Renown/i,influence:/影响力|Influence/i,prowess:/勇武|Prowess/i,treasury:/国库储备|Treasury/i,time:/冷却|间隔|Cooldown/i}).filter(([k,re])=>re.test(k==='prestige'?summary.replace(/宗族威望/g,'').replace(/Dynasty Renown/gi,''):summary)).map(([k])=>k).slice(0,5);
  }else return;
  if(!host||!keys?.length)return;
  const section=document.createElement('section');section.className='sq-wiki-resources';section.setAttribute('aria-label',l('游戏资源图例','Game resource reference'));
- section.innerHTML='<h3>'+l('CK3 资源速查','CK3 resource reference')+'</h3><div class="sq-wiki-tokens">'+keys.map(sqWikiLabel).join('')+'</div><p>'+l('对应 CK3 官方文本图标注册名；本站图形为自绘示意，不是游戏原始 DDS。出现于本文不等于必然支付或领取。','Names match CK3 texticon registries; these are site-drawn references, not the original DDS artwork. Mentioned does not mean required payment or guaranteed reward.')+'</p>';
+ section.innerHTML='<h3><a href="#resources">'+l('CK3 资源速查','CK3 resource reference')+' '+arrow()+'</a></h3><div class="sq-wiki-tokens">'+keys.map(sqWikiLabel).join('')+'</div><p>'+l('已有来源的资源展示 GitHub PNG，其余保留本站图形。本文提及不代表必然消耗或奖励。','Registry-matched PNGs load from GitHub, with original fallbacks. A mention does not imply a cost or reward.')+'</p>';
  host.parentNode.insertBefore(section,host.nextSibling);
+}
+
+
+function renderMuseGlossary(){
+ const cards=SQ_RESOURCE_CATALOG.map(x=>{
+  const png=!!SQ_COLOR_PNG[x.id],name=lang==='en'?x.en:x.zh,desc=lang==='en'?x.enDescription:x.description;
+  return '<article class="muse-resource-card" id="'+esc(x.id)+'"><div class="muse-resource-head">'+sqWikiImage(x.id)+'<h3>'+esc(name)+'</h3></div><p>'+esc(desc)+'</p><small>'+ (png?l('CK3 PNG 路径对照','CK3 PNG reference'):l('本站示意图','Site-drawn placeholder'))+'</small><code>@'+esc(x.macro)+'!</code><code>'+esc(x.texture)+'</code></article>';
+ }).join('');
+ const piety=SQ_PIETY_PNG.map(x=>'<figure><img src="'+esc(x.src)+'" alt="" width="75" height="75" loading="lazy" decoding="async"><figcaption><strong>'+esc(lang==='en'?x.en:x.zh)+'</strong><code>@'+esc(x.macro)+'!</code><small>'+esc(x.texture)+'</small></figcaption></figure>').join('');
+ const flat=SQ_FLAT_PNG.map(x=>'<figure><img src="'+esc(x.src)+'" alt="" width="60" height="60" loading="lazy" decoding="async"><figcaption><strong>'+esc(lang==='en'?x.en:x.zh)+'</strong><small>'+esc(x.texture)+'</small></figcaption></figure>').join('');
+ return pageHero(l('CK3 资源与图标词典','CK3 Resource Glossary'),l('核对游戏资源标识、宗教差异和圣泉自定义图标。','Explore registry names, faith variants and Sacred Spring icons.'),'palette','map-lake')
+ +'<section class="section"><div class="shell muse-reference"><p class="muse-reference-intro">'+l('有来源的游戏 PNG 通过 GitHub 加载，尚无原图的条目使用网站自绘符号。文本宏路径以 CK3 与圣泉 GUI 注册为准；图例不表示固定费用或奖励。','Game PNG references load from GitHub; missing images use site glyphs. Registry paths come from CK3 and Sacred Spring GUI, but these symbols do not imply fixed costs or rewards.')+'</p><div class="muse-reference-actions"><a href="#compendium">'+icon('quest-map')+l('35 篇专题','All 35 guides')+'</a><a href="#icons">'+icon('palette')+l('网站原创图标','Site icons')+'</a></div><h2>'+l('游戏资源和属性 · 11 项','Resources & attributes · 11 entries')+'</h2><div class="muse-resource-grid">'+cards+'</div>'
+ +'<h2>'+l('虔诚图标的宗教变体','Piety variants by faith')+'</h2><p class="muse-reference-explain">'+l('通用 @piety_icon! 注册为基督教样式，东方宗教与道教有另外的注册图像。','The generic @piety_icon! maps to Christian art; Eastern and Taoist faiths have their own icon registrations.')+'</p><div class="muse-piety-grid">'+piety+'</div>'
+ +'<h2>'+l('原版 UI 扁平图案 · 12 枚','Flat UI emblems · 12 images')+'</h2><p class="muse-reference-explain">'+l('这些是界面装饰图案，并非上方宏所用的彩色文本资源原图。','These are interface decorations, not the colored text-resource files used by the macros above.')+'</p><div class="muse-flat-grid">'+flat+'</div>'
+ +'<p class="muse-reference-legal">'+l('CK3 图形版权归 Paradox Interactive AB。PNG 的注册名及路径已对应核对，但没有进行与 DDS 的二进制一致性验证，也不声称拥有再分发许可。','CK3 artwork © Paradox Interactive AB. Registry names and filenames were matched, but binary DDS equivalence and redistribution rights have not been established.')+'</p></div></section>';
+}
+function renderMuseCompendium(){
+ const groups=[
+ ...DATA.groups.map(g=>({id:g.id,zh:g.title,en:g.en,ids:g.routes})),
+ {id:'roles',zh:'阿斯塔特五职业',en:'Five Astartes professions',ids:DATA.professions.map(p=>'profession-'+p.id)},
+ {id:'expansion',zh:'独立扩展和外观',en:'Independent expansions & appearances',ids:['c1','c2','c3','c4','c5','armour']},
+ {id:'support',zh:'支持与历史资料',en:'Support & archives',ids:['m11','m14','m21','migration','status','unknown']}
+ ];
+ const filters='<button data-muse-filter="all" aria-pressed="true">'+l('全部','All')+'</button>'+groups.map(g=>'<button data-muse-filter="'+esc(g.id)+'" aria-pressed="false">'+esc(lang==='en'?g.en:g.zh)+'</button>').join('');
+ const sections=groups.map(g=>{
+  const cards=g.ids.map(id=>{
+   const r=DATA.routes[id],p=r?null:roleById(id),title=r?topicTitle(id):(lang==='en'?ROLE_NAMES[p.id]:p.title);
+   const desc=r?(lang==='en'?(r.en?.tagline||r.en?.summary||r.summary):r.summary):(lang==='en'?(p.en?.summary||p.summary):p.summary);
+   const art=r?(ASSETS[r.art+'-thumb']?r.art+'-thumb':r.art):null;
+   const img=art&&ASSETS[art]?picture(art,'','muse-guide-image'):'<div class="muse-guide-placeholder">'+icon(r?.icon||p?.icon_id||'grail')+'</div>';
+   const search=esc([id,title,desc,r?.title,r?.en?.feature,g.zh,g.en].filter(Boolean).join(' ').toLocaleLowerCase());
+   return '<article data-muse-card data-muse-search="'+search+'"><a href="#'+esc(id)+'">'+img+'<div><h3>'+esc(title)+'</h3><p>'+esc(desc)+'</p><small>'+l('进入专题','Read guide')+' '+arrow()+'</small></div></a></article>';
+  }).join('');
+  return '<section class="muse-guide-group" data-muse-group="'+esc(g.id)+'"><h2>'+esc(lang==='en'?g.en:g.zh)+'</h2><div class="muse-guide-grid">'+cards+'</div></section>';
+ }).join('');
+ return pageHero(l('湖畔诸事 · 专题全书','The Sacred Spring Compendium'),l('35 篇专题与职业说明，都在当前 Muse 单文件站点内。','Thirty-five guides and professions inside this one Muse HTML file.'),'quest-map','world-map')
+ +'<section class="section"><div class="shell muse-compendium"><p class="muse-reference-intro">'+l('这里的每个专题都有独立的 #地址，点击后仍留在当前网页，不依赖其它 HTML 文件。','Each guide has a shareable #route inside this document, without loading another HTML file.')+'</p><div class="muse-guide-tools"><label for="muse-guide-search">'+l('搜索专题','Search guides')+'</label><input id="muse-guide-search" type="search" autocomplete="off" placeholder="'+l('名称、玩法、职业','Name, mechanic, profession')+'"><button data-muse-reset type="button">'+l('重置','Reset')+'</button></div><div class="muse-guide-filters" role="group" aria-label="'+l('专题分类','Guide categories')+'">'+filters+'</div><p class="muse-guide-count" aria-live="polite" id="muse-guide-count"></p><p class="muse-guide-empty" id="muse-guide-empty" hidden>'+l('没有匹配专题，请简化关键词或重置。','No matching guide. Try a shorter term or reset.')+'</p>'+sections+'<p class="muse-reference-legal">'+l('需要核对货币、虔诚或功业资源？','Looking for currencies or Deeds resources?')+' <a href="#resources">'+l('进入 CK3 资源词典','Open resource glossary')+'</a></p></div></section>';
+}
+function filterMuseCompendium(){
+ const search=$('#muse-guide-search');if(!search)return;
+ const tokens=search.value.normalize('NFKC').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);let total=0,visible=0;
+ $('[data-muse-group]',main).forEach(group=>{
+  let inGroup=0;
+  $('[data-muse-card]',group).forEach(card=>{
+   total++;const show=(museGuideFilter==='all'||group.dataset.museGroup===museGuideFilter)&&tokens.every(token=>(card.dataset.museSearch||'').includes(token));
+   card.hidden=!show;if(show){visible++;inGroup++;}
+  });group.hidden=inGroup===0;
+ });
+ $('[data-muse-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.museFilter===museGuideFilter)));
+ if($('#muse-guide-count'))$('#muse-guide-count').textContent=l('显示 '+visible+' / '+total+' 篇','Showing '+visible+' / '+total+' guides');
+ if($('#muse-guide-empty'))$('#muse-guide-empty').hidden=visible>0;
 }
 
 function render(){
@@ -507,14 +635,14 @@ function render(){
  if(lastView!==key){
   if(tocObserver)tocObserver.disconnect();
   header();
-  const activeNav=next.route==='home'?'#modules':next.route==='announcements'||next.route==='versions'||DATA.releases.some(r=>r.id===next.route)?'#versions':next.route==='gallery'?'#gallery':next.route==='map'?'#map':['help','unknown','status','migration','m21'].includes(next.route)?'#help':'#modules';
+  const activeNav=next.route==='compendium'?'#compendium':next.route==='resources'?'#resources':next.route==='home'?'#modules':next.route==='announcements'||next.route==='versions'||DATA.releases.some(r=>r.id===next.route)?'#versions':next.route==='gallery'?'#gallery':next.route==='map'?'#map':['help','unknown','status','migration','m21'].includes(next.route)?'#help':'#modules';
   $$('.desktop-nav a').forEach(a=>{if(a.getAttribute('href')===activeNav)a.setAttribute('aria-current','page');});
   let markup;
   if(next.route==='home')markup=renderHome();
   else if(DATA.routes[next.route])markup=renderTopic(next.route);
   else if(next.route.startsWith('profession-')&&roleById(next.route))markup=renderRole(next.route);
   else if(DATA.releases.some(r=>r.id===next.route))markup=renderRelease(next.route);
-  else markup=({announcements:renderAnnouncements,versions:renderVersions,chaos:renderChaos,help:renderHelp,map:renderMap,gallery:renderGallery,reference:()=>renderReference(next.anchor),icons:renderIcons}[next.route]||renderNotFound)();
+  else markup=({compendium:renderMuseCompendium,resources:renderMuseGlossary,announcements:renderAnnouncements,versions:renderVersions,chaos:renderChaos,help:renderHelp,map:renderMap,gallery:renderGallery,reference:()=>renderReference(next.anchor),icons:renderIcons}[next.route]||renderNotFound)();
   main.innerHTML=markup;lastView=key;
   convertInternalNav(document.body);
   main.dataset.route=next.route;
@@ -526,7 +654,7 @@ function render(){
   $$('[data-goto]',main).forEach(b=>{b.type='button';b.dataset.nav=b.dataset.goto;b.removeAttribute('data-goto');});
   activateImages();attachTOC();sqWikiDecorate(next.route);
   if(next.route==='home'){moduleFilter='all';moduleQuery='';filterModules();}
-  if(next.route==='icons'){iconQuery='';iconFilter='all';filterIcons();}
+  if(next.route==='icons'){iconQuery='';iconFilter='all';filterIcons();}if(next.route==='compendium'){museGuideFilter='all';filterMuseCompendium();}
   galleryFilter='all';
   metrics.routes.push({route:next.route,lang,renderMs:+(performance.now()-start).toFixed(2)});
  }
@@ -544,10 +672,11 @@ function filterIcons(){const q=iconQuery.trim().toLocaleLowerCase();let n=0;$$('
 function openDialog(id){const d=document.getElementById(id);if(!d.open)d.showModal();document.body.classList.add('dialog-open');}
 function closeDialogs(){ $$('dialog[open]').forEach(d=>d.close());document.body.classList.remove('dialog-open');}
 function openMenu(){
- $('#menu-body').innerHTML=`<a href="#home">${icon('grail')}${l('首页','Home')}</a><a href="#versions">${icon('news-scroll')}${l('版本目录','Versions')}</a><a href="#announcements">${icon('news-scroll')}${l('版本公告','Announcements')}</a>${DATA.groups.map(g=>`<h3>${esc(lang==='en'?g.en:g.title)}</h3>${g.routes.map(id=>`<a href="#${id}">${icon(DATA.routes[id].icon)}${esc(topicTitle(id))}${arrow()}</a>`).join('')}`).join('')}<h3>${l('阿斯塔特职业','Astartes professions')}</h3>${DATA.professions.map(p=>`<a href="#profession-${p.id}">${icon(p.icon_id)}${esc(lang==='en'?ROLE_NAMES[p.id]:p.title)}${arrow()}</a>`).join('')}<h3>${l('扩展与资料','Expansions & resources')}</h3>${[['chaos','chaos-rift',l('混沌扩展','Chaos')],['armour','armour',l('铠甲外观','Armour')],['map','quest-map',l('探索地图','Map')],['gallery','gallery-frame',l('游戏图集','Gallery')],['help','help-book',l('安装与帮助','Help')],['reference','help-book',l('原始资料档案','Archive')],['icons','palette',l('图标与纹样','Icons')]].map(([id,ico,title])=>`<a href="#${id}">${icon(ico)}${title}${arrow()}</a>`).join('')}`;convertInternalNav($('#menu-body'));openDialog('menu-dialog');
+ $('#menu-body').innerHTML=`<a href="#home">${icon('grail')}${l('首页','Home')}</a><a href="#compendium">${icon('quest-map')}${l('35 篇独立专题','All 35 guides')}</a><a href="#resources">${icon('palette')}${l('CK3 资源词典','CK3 resource glossary')}</a><a href="#versions">${icon('news-scroll')}${l('版本目录','Versions')}</a><a href="#announcements">${icon('news-scroll')}${l('版本公告','Announcements')}</a>${DATA.groups.map(g=>`<h3>${esc(lang==='en'?g.en:g.title)}</h3>${g.routes.map(id=>`<a href="#${id}">${icon(DATA.routes[id].icon)}${esc(topicTitle(id))}${arrow()}</a>`).join('')}`).join('')}<h3>${l('阿斯塔特职业','Astartes professions')}</h3>${DATA.professions.map(p=>`<a href="#profession-${p.id}">${icon(p.icon_id)}${esc(lang==='en'?ROLE_NAMES[p.id]:p.title)}${arrow()}</a>`).join('')}<h3>${l('扩展与资料','Expansions & resources')}</h3>${[['chaos','chaos-rift',l('混沌扩展','Chaos')],['armour','armour',l('铠甲外观','Armour')],['map','quest-map',l('探索地图','Map')],['gallery','gallery-frame',l('游戏图集','Gallery')],['help','help-book',l('安装与帮助','Help')],['reference','help-book',l('原始资料档案','Archive')],['icons','palette',l('图标与纹样','Icons')]].map(([id,ico,title])=>`<a href="#${id}">${icon(ico)}${title}${arrow()}</a>`).join('')}`;convertInternalNav($('#menu-body'));openDialog('menu-dialog');
 }
 function buildSearchIndex(){
  const out=[];const add=(type,title,body,url,ico,context,keywords='')=>out.push({type,title,body:strip(body),url,ico,context,keywords});
+ for(const x of SQ_RESOURCE_CATALOG)add('feature',lang==='en'?x.en:x.zh,(lang==='en'?x.enDescription:x.description)+' '+x.texture,'#resources:'+x.id,'palette',l('资源词典','Resource glossary'),x.zh+' '+x.en+' '+x.macro);
  for(const r of Object.values(DATA.routes)){
   const type=r.id==='m14'?'archive':'feature';add(type,topicTitle(r.id),lang==='en'?(r.en.summary+' '+r.en.entry+' '+(r.en.narrative||[]).join(' ')):(r.summary+' '+r.story+' '+r.entry+' '+(r.narrative||[]).join(' ')),'#'+r.id,r.icon,l('主题总览','Feature overview'),r.title+' '+r.summary+' '+r.en.title+' '+r.en.feature+' '+r.en.story);
   for(const p of r.parts){const q=lang==='en'?(p.en||p):p;add(type,q.title,q.html,'#'+r.id+':'+p.id,r.icon,topicTitle(r.id),p.title+' '+p.html);}
@@ -586,7 +715,9 @@ function updateScroll(){const max=document.documentElement.scrollHeight-innerHei
 let scrollPending=false;window.addEventListener('scroll',()=>{if(!scrollPending){scrollPending=true;requestAnimationFrame(()=>{scrollPending=false;updateScroll();});}},{passive:true});
 document.addEventListener('click',async event=>{
  const el=event.target.closest('button,a');if(!el)return;
- if(el.matches('[data-close-reference]')){const drawer=el.closest('.reading-reference');if(drawer)drawer.open=false;const h='#'+el.dataset.closeReference+':introduction';if(location.hash===h)render();else location.hash=h;}
+ if(el.matches('[data-muse-filter]')){museGuideFilter=el.dataset.museFilter;filterMuseCompendium();}
+ else if(el.matches('[data-muse-reset]')){const input=$('#muse-guide-search');if(input)input.value='';museGuideFilter='all';filterMuseCompendium();input?.focus();}
+ else if(el.matches('[data-close-reference]')){const drawer=el.closest('.reading-reference');if(drawer)drawer.open=false;const h='#'+el.dataset.closeReference+':introduction';if(location.hash===h)render();else location.hash=h;}
  else if(el.matches('[data-close]')){document.getElementById(el.dataset.close).close();document.body.classList.toggle('dialog-open',!!$('dialog[open]'));}
  else if(el.matches('[data-search]'))openSearch(moduleQuery||'');
  else if(el.matches('[data-menu]'))openMenu();
@@ -614,7 +745,7 @@ document.addEventListener('click',async event=>{
   closeDialogs();
  }
 });
-document.addEventListener('input',e=>{if(e.target.id==='module-search'){moduleQuery=e.target.value;filterModules();}else if(e.target.id==='icon-search'){iconQuery=e.target.value;filterIcons();}else if(e.target.id==='global-search'){clearTimeout(searchTimer);searchTimer=setTimeout(performSearch,90);}});
+document.addEventListener('input',e=>{if(e.target.id==='muse-guide-search'){filterMuseCompendium();}else if(e.target.id==='module-search'){moduleQuery=e.target.value;filterModules();}else if(e.target.id==='icon-search'){iconQuery=e.target.value;filterIcons();}else if(e.target.id==='global-search'){clearTimeout(searchTimer);searchTimer=setTimeout(performSearch,90);}});
 document.addEventListener('toggle',e=>{if(e.target.matches('.reading-reference, .detail-box'))requestAnimationFrame(updateScroll);},true);
 document.addEventListener('change',e=>{if(e.target.id==='icon-size'){iconSize=Number(e.target.value);filterIcons();}});
 document.addEventListener('keydown',e=>{
@@ -626,7 +757,8 @@ document.addEventListener('keydown',e=>{
 });
 $$('dialog').forEach(d=>{d.addEventListener('close',()=>document.body.classList.toggle('dialog-open',!!$('dialog[open]')));d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
 window.addEventListener('hashchange',render);
+document.addEventListener('error',e=>{const image=e.target;if(image?.tagName!=='IMG'||!image.hasAttribute('data-sq-icon-remote'))return;image.hidden=true;const f=image.parentElement?.querySelector('.sq-game-fallback');if(f)f.hidden=false;},true);
 makeSprite();render();metrics.initMs=+(performance.now()-metrics.initStarted).toFixed(2);
-window.SQ_REVIEW={metrics,normalizeHash,routeIds:[...Object.keys(DATA.routes),...DATA.professions.map(p=>'profession-'+p.id),...DATA.releases.map(r=>r.id),'home','announcements','chaos','help','map','gallery','reference','icons'],assetIds:Object.keys(ASSETS),aliases:DATA.aliases,activeAbilityCount:DATA.professions.reduce((n,p)=>n+p.chapters.reduce((m,c)=>m+c.abilities.filter(a=>a.entry_kind==='active').length,0),0),triggeredAbilityCount:DATA.professions.reduce((n,p)=>n+p.chapters.reduce((m,c)=>m+c.abilities.filter(a=>a.entry_kind==='triggered').length,0),0),archiveIds:Object.keys(DATA.archives)};
+window.SQ_REVIEW={metrics,normalizeHash,routeIds:[...Object.keys(DATA.routes),...DATA.professions.map(p=>'profession-'+p.id),...DATA.releases.map(r=>r.id),'home','compendium','resources','announcements','chaos','help','map','gallery','reference','icons'],assetIds:Object.keys(ASSETS),aliases:DATA.aliases,activeAbilityCount:DATA.professions.reduce((n,p)=>n+p.chapters.reduce((m,c)=>m+c.abilities.filter(a=>a.entry_kind==='active').length,0),0),triggeredAbilityCount:DATA.professions.reduce((n,p)=>n+p.chapters.reduce((m,c)=>m+c.abilities.filter(a=>a.entry_kind==='triggered').length,0),0),archiveIds:Object.keys(DATA.archives)};
 })();
 </script></body></html>
