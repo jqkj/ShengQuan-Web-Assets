@@ -8,14 +8,12 @@ const toggle=document.querySelector("[data-lang-switch]");
 const tr=(z,e)=>'<span class="zh">'+z+'</span><span class="en">'+e+'</span>';
 let lastLang="zh",saved="";
 try{saved=localStorage.getItem("sq-language")||""}catch(_){}
+const resourceGeometry={"gold":"<circle cx=\"10\" cy=\"11\" r=\"6.9\"/><circle cx=\"15\" cy=\"14\" r=\"5.3\"/><path d=\"M7.5 11h5M10 8.7v4.6m2.6 1.1h4.5\"/>","prestige":"<path d=\"m3 7.5 4 3 5-6 5 6 4-3-2 11H5z\"/><path d=\"M5.5 15h13M6 20h12\"/>","piety":"<path d=\"M11 2h2l1 5 4 2-1 4-5 9-5-9-1-4 4-2z\"/><path d=\"M8 11h8M12 5v12\"/>","renown":"<path d=\"M12 22V7m0 8-5-5m5 2 5-5M6 22h12\"/><path d=\"M12 5c-4-4-9 0-9 5 0 3 3 5 6 4m3-9c5-3 9 0 9 5 0 3-3 5-6 4\"/>","influence":"<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m12 5 2 5 5 2-5 2-2 5-2-5-5-2 5-2z\"/>","prowess":"<path d=\"M4 4l16 16M20 4 4 20M6 15l3 3m6-12 3 3M3 18l3 3m12-18 3 3\"/>","treasury":"<rect x=\"3.5\" y=\"7.5\" width=\"17\" height=\"13\" rx=\"1\"/><path d=\"m3.5 8 8.5 5 8.5-5M12 13v7.5M4.5 5h15\"/>","time":"<path d=\"M6 2.5h12M6 21.5h12M7 3.5c0 6 5 6 5 8.5s-5 4-5 8.5m10-17c0 6-5 6-5 8.5s5 4 5 8.5\"/><path d=\"M9 9h6m-6 9h6\"/>","imperialGrace":"<circle cx=\"12\" cy=\"12\" r=\"4.4\"/><path d=\"M12 1v5m0 12v5M1 12h5m12 0h5M4 4l3.5 3.5m9 9L20 20m0-16-3.5 3.5m-9 9L4 20\"/>","oathBlood":"<path d=\"M12 2C8 8 5 12 5 15a7 7 0 0 0 14 0c0-3-3-7-7-13z\"/><path d=\"M8.5 15.5c0 2 1 3 3 3\"/>","oathToken":"<path d=\"m12 2 8.5 5v10L12 22l-8.5-5V7z\"/><path d=\"m12 6 5 6-5 6-5-6z\"/>"};
 function symbol(id){
  const cfg=ICONMAP[id],node=document.createElement("span");node.className="ck3-symbol";node.dataset.icon=id;
  node.style.setProperty("--ck3-color",cfg.color);node.setAttribute("aria-hidden","true");
- const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 28 28");svg.setAttribute("focusable","false");
- const base=document.createElementNS("http://www.w3.org/2000/svg","circle");base.setAttribute("cx","14");base.setAttribute("cy","14");base.setAttribute("r","11");base.setAttribute("fill","none");base.setAttribute("stroke","currentColor");base.setAttribute("stroke-width","1");
- svg.append(base);
- const t=document.createElementNS("http://www.w3.org/2000/svg","text");t.setAttribute("x","14");t.setAttribute("y","18.5");t.setAttribute("text-anchor","middle");t.setAttribute("font-size",cfg.id==="prowess"?"16":"17");t.setAttribute("font-weight","700");t.setAttribute("font-family","Georgia,serif");t.setAttribute("fill","currentColor");t.textContent=cfg.glyph;
- svg.append(t);node.append(svg);return node;
+ node.innerHTML='<svg viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65">'+resourceGeometry[id]+"</g></svg>";
+ return node;
 }
 function chip(id){
  const cfg=ICONMAP[id],root=document.createElement("span");root.className="ck3-resource-chip";root.dataset.macro=cfg.macro;
@@ -41,7 +39,7 @@ oathBlood:/功业血纹/i,oathToken:/功业印记|凝露|Oath Token/i
 function articlePanel(){
  const article=document.querySelector("article.article");if(!article)return;
  const s=[...article.querySelectorAll(".story.zh,.quick .zh,.rules .zh")].map(x=>x.textContent).join(" ");
- const relevant=Object.keys(patterns).filter(k=>patterns[k].test(s)).slice(0,7);
+ const relevant=Object.keys(patterns).filter(k=>patterns[k].test(k==="prestige"?s.replace(/宗族威望/g,""):s)).slice(0,7);
  const panel=document.createElement("section");panel.className="wiki-resource-panel";panel.id="resources";
  const header=document.createElement("div");header.className="wiki-resource-heading";header.innerHTML='<h2>'+tr("玩法速览","At a glance")+'</h2><a href="resources.html">'+tr("货币与图标词典 ↗","Resource glossary ↗")+"</a>";panel.append(header);
  if(relevant.length){const line=document.createElement("div");line.className="wiki-resource-row";const strong=document.createElement("strong");strong.innerHTML=tr("本文涉及","Mentioned resources");line.append(strong);
