@@ -145,6 +145,18 @@ html{scroll-padding-top:0}.article-section,.ability,#modules,#addons{scroll-marg
 /* V8: restrained long-form reading polish; no duplicate summary cards. */
 @media(min-width:901px){.reading-article{max-width:790px}.prose .narrative-flow>p{font-size:17px;line-height:2.0;letter-spacing:0}.prose .narrative-flow>p:first-child{font-size:19px;line-height:1.95}}
 @media(max-width:640px){.prose .narrative-flow>p{font-size:15.5px;line-height:1.92;margin-bottom:19px}.prose .narrative-flow>p:first-child{font-size:16.5px;line-height:1.94}}
+</style><style>
+/* Wiki resource flourishes on the Muse-compatible single-file site; no external assets. */
+.sq-wiki-resources{background:linear-gradient(105deg,#e6f0f5,#fffaf0);border:1px solid #cedfe7;border-top:3px solid #bfa876;padding:14px 18px 13px;margin:20px 0 25px;color:#294d65}
+.sq-wiki-resources h3{font:600 18px/1.4 var(--serif);margin:0 0 10px}
+.sq-wiki-tokens{display:flex;flex-wrap:wrap;gap:8px}
+.sq-wiki-token{display:inline-flex;align-items:center;gap:7px;font-size:12px;line-height:1.55;border:1px solid #d9d5c5;background:#fffdf7;padding:4px 9px 4px 5px;color:#254660;border-radius:3px}
+.sq-wiki-token svg{display:block;width:21px;height:21px;flex:none;filter:drop-shadow(0 1px 0 #fff)}
+.sq-wiki-resources p{font-size:11px;line-height:1.7;color:#657d8b;margin:10px 0 0}
+.sq-wiki-resources .sq-wiki-legend{font-size:11px;color:#627c8c}
+.sq-wiki-value{display:inline-flex;gap:2px;align-items:center;white-space:nowrap}
+.sq-wiki-value svg{width:16px;height:16px;display:inline-block;vertical-align:middle}
+@media(max-width:640px){.sq-wiki-resources{padding:13px 15px;margin:15px 0 21px}.sq-wiki-resources h3{font-size:16px}}
 </style></head>
 <body><button type="button" data-nav="#content" class="skip">跳到主要内容</button><div id="svg-library" hidden aria-hidden="true"></div><header class="site-header"><div class="header-inner shell" id="header"></div><div class="reading-progress" id="reading-progress" aria-hidden="true"></div></header>
 <main id="content" tabindex="-1"></main><footer class="site-footer" id="footer"></footer><button class="back-top" id="back-top" type="button" aria-label="回到顶部">↑</button><div id="toast" class="toast" role="status" hidden></div>
@@ -461,6 +473,34 @@ function normalizeHash(hash){
  if(['modules','addons'].includes(route))return {route:'home',anchor:route};
  return {route,anchor};
 }
+
+const SQ_VANILLA_RESOURCES={
+ gold:{zh:'金币',en:'Gold',macro:'gold_icon',shade:'#bd8e32',p:'<circle cx="11" cy="12" r="8"/><circle cx="14" cy="10" r="5"/><path d="M12 7v6m-2-3h4"/>'},
+ prestige:{zh:'威望',en:'Prestige',macro:'prestige_icon',shade:'#b69b73',p:'<path d="m2 8 4 3 6-7 5 7 5-3-2 11H4L2 8z"/><path d="M5 16h14"/>'},
+ piety:{zh:'虔诚',en:'Piety',macro:'piety_icon',shade:'#6b9db0',p:'<path d="m12 2 6 8-6 12-6-12z"/><path d="M8 10h8M12 6v10"/>'},
+ renown:{zh:'宗族威望',en:'Dynasty Renown',macro:'dynasty_prestige_icon',shade:'#7fa88b',p:'<path d="M12 21V7m0 8-5-5m5 2 5-5"/><path d="M12 5c-4-3-9 0-9 5 0 3 3 5 6 4m3-9c5-3 9 0 9 5 0 3-3 5-6 4"/>'},
+ influence:{zh:'影响力',en:'Influence',macro:'influence_icon',shade:'#aa90c1',p:'<circle cx="12" cy="12" r="9"/><path d="m12 5 2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>'},
+ prowess:{zh:'勇武',en:'Prowess',macro:'skill_prowess_icon',shade:'#748ea6',p:'<path d="M4 4l16 16M20 4 4 20M5 15l4 4m6-14 4 4"/>'},
+ treasury:{zh:'国库',en:'Treasury',macro:'treasury_icon',shade:'#ac9762',p:'<rect x="4" y="8" width="16" height="13" rx="1"/><path d="M4 8l8 5 8-5M12 13v8M4 6h16"/>'},
+ time:{zh:'冷却时间',en:'Cooldown',macro:'time_icon',shade:'#7698b1',p:'<path d="M6 3h12M6 21h12M7 4c0 6 5 6 5 8s-5 4-5 8m10-16c0 6-5 6-5 8s5 4 5 8"/>'}
+};
+function sqResourceSvg(key){const r=SQ_VANILLA_RESOURCES[key];return '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="'+r.shade+'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+r.p+'</svg>';}
+function sqWikiLabel(key){const r=SQ_VANILLA_RESOURCES[key];return '<span class="sq-wiki-token" title="@'+r.macro+'!">'+sqResourceSvg(key)+'<span>'+esc(lang==='en'?r.en:r.zh)+'</span></span>';}
+function sqWikiDecorate(route){
+ const topic=DATA.routes[route]||roleById(route);
+ let keys,host;
+ if(route==='home'){keys=['gold','prestige','piety','renown','prowess'];host=document.querySelector('.module-tools');}
+ else if(topic){host=document.querySelector('.reading-article .reading-tools');if(!host)return;
+  const story=document.querySelector('.reading-article .narrative-flow');
+  const summary=((story?.textContent||'')+' '+(topic.prepare||'')+' '+(topic.caution||'')).replace(/宗族威望/g,'');
+  keys=Object.entries({gold:/金币|Gold/i,prestige:/威望|Prestige/i,piety:/虔诚|Piety/i,renown:/宗族威望|Renown/i,influence:/影响力|Influence/i,prowess:/勇武|Prowess/i,treasury:/国库储备|Treasury/i,time:/冷却|间隔|Cooldown/i}).filter(([k,re])=>re.test(k==='renown'?(story?.textContent||''):summary)).map(([k])=>k).slice(0,5);
+ }else return;
+ if(!host||!keys?.length)return;
+ const section=document.createElement('section');section.className='sq-wiki-resources';section.setAttribute('aria-label',l('游戏资源图例','Game resource reference'));
+ section.innerHTML='<h3>'+l('CK3 资源速查','CK3 resource reference')+'</h3><div class="sq-wiki-tokens">'+keys.map(sqWikiLabel).join('')+'</div><p>'+l('对应 CK3 官方文本图标注册名；本站图形为自绘示意，不是游戏原始 DDS。出现于本文不等于必然支付或领取。','Names match CK3 texticon registries; these are site-drawn references, not the original DDS artwork. Mentioned does not mean required payment or guaranteed reward.')+'</p>';
+ host.parentNode.insertBefore(section,host.nextSibling);
+}
+
 function render(){
  const start=performance.now(),next=normalizeHash(location.hash), key=lang+':'+next.route+(next.route==='reference'?':'+next.anchor:'');
  current=next;
@@ -484,7 +524,7 @@ function render(){
   $$('a[href^="http"]',main).forEach(a=>{a.target='_blank';a.rel='noopener noreferrer';});
   // Source notes may contain navigation buttons from historical snapshots.
   $$('[data-goto]',main).forEach(b=>{b.type='button';b.dataset.nav=b.dataset.goto;b.removeAttribute('data-goto');});
-  activateImages();attachTOC();
+  activateImages();attachTOC();sqWikiDecorate(next.route);
   if(next.route==='home'){moduleFilter='all';moduleQuery='';filterModules();}
   if(next.route==='icons'){iconQuery='';iconFilter='all';filterIcons();}
   galleryFilter='all';
