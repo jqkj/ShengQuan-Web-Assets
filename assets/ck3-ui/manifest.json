@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "CK3 flat UI image samples, not texticon macro assets",
+  "copyright": "Crusader Kings III © Paradox Interactive AB",
+  "source": "User-provided Google Drive flat_icons",
+  "dds_binary_verified": false,
+  "images": [
+    {
+      "png": "flat/prestige.png",
+      "game_dds": "gfx/interface/icons/flat_icons/prestige.dds",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/piety.png",
+      "game_dds": "gfx/interface/icons/flat_icons/piety.dds",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/time.png",
+      "game_dds": "gfx/interface/icons/flat_icons/time.dds",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    },
+    {
+      "png": "flat/treasury.png",
+      "game_dds": "gfx/interface/icons/flat_icons/treasury.dds",
+      "width": 60,
+      "height": 60,
+      "same_as_texticon_macro": false
+    }
+  ]
+}

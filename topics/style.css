@@ -42,3 +42,26 @@
 [hidden]{display:none!important}
 @media(max-width:900px){.resource-glossary-grid{grid-template-columns:1fr}.wiki-toolbar>input{max-width:none}}
 @media(max-width:650px){.wiki-resource-panel{padding:16px 18px}.wiki-resource-catalog{padding:19px}.wiki-toolbar{padding:15px}.wiki-resource-heading h2{font-size:19px}.ck3-resource-chip{font-size:12px}.resource-glossary-item{padding:17px 18px}}
+
+/* Game UI silhouettes are separate from registered macro pictograms. */
+.wiki-flat-preview{border-top:1px solid #d7e3e5;margin-top:18px;padding-top:14px}
+.wiki-flat-preview>strong{display:block;color:#34566a;font-size:13px;margin-bottom:10px}
+.wiki-flat-preview-strip{display:flex;gap:8px;flex-wrap:wrap}
+.wiki-flat-preview-link{display:inline-flex;gap:7px;align-items:center;padding:6px 10px 6px 6px;border:1px solid #cbdcdb;border-radius:4px;background:#f9fcfa;color:#345870;text-decoration:none;font-size:12px}
+.wiki-flat-preview-link:hover,.wiki-flat-preview-link:focus-visible{background:#ecf5f1;border-color:#9aada9}
+.wiki-flat-preview-link img{height:27px;width:27px;object-fit:contain;filter:invert(32%) sepia(16%) saturate(1047%) hue-rotate(137deg);opacity:.94}
+.wiki-flat-preview>small{display:block;margin-top:9px;color:#6e8390;font-size:11px;line-height:1.6}
+.ck3-reference-section{margin-top:43px;padding:30px;border:1px solid #d6e2e1;border-top:3px solid #bfa677;background:linear-gradient(155deg,#f0f6f4,#fafbf8 52%,#fffaf1)}
+.ck3-reference-section h2{font:600 26px var(--serif);color:#2d5669;margin:8px 0 11px}
+.ck3-reference-section>p:not(.eyebrow){font-size:13px;line-height:1.85;color:#5b7480;margin:0 0 23px}
+.ck3-reference-section>small{display:block;font-size:11px;color:#71818b;line-height:1.75;margin-top:17px}
+.ck3-reference-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.ck3-flat-reference{margin:0;background:#fff;border:1px solid #d9e4e1;min-width:0;padding:17px 15px}
+.ck3-flat-image{width:68px;height:68px;display:grid;place-items:center;background:#f5f7ef;border:1px solid #e4e2d7;border-radius:7px;margin-bottom:12px}
+.ck3-flat-image img{width:53px;height:53px;object-fit:contain;filter:invert(31%) sepia(14%) saturate(1300%) hue-rotate(133deg);opacity:.92}
+.ck3-flat-image.is-missing::before{content:"—";color:#91a3a5}
+.ck3-flat-reference figcaption{display:flex;flex-direction:column;gap:7px;min-width:0}
+.ck3-flat-reference figcaption strong{font:600 18px var(--serif);color:#345366}
+.ck3-flat-reference figcaption code{font-size:10px;line-height:1.6;color:#587382;overflow-wrap:anywhere;white-space:normal}
+@media(max-width:900px){.ck3-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.ck3-reference-section{padding:22px 16px}.ck3-reference-grid{gap:9px}.ck3-flat-reference{padding:12px}.ck3-flat-image{width:58px;height:58px}.ck3-flat-image img{width:46px;height:46px}}
