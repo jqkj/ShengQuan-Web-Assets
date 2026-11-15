@@ -1,0 +1,33 @@
+
+/* Release chronicle inherits site colour and language rules from topics/style.css. */
+.release-main{padding:32px 0 95px;max-width:1060px}
+.release-archive-note,.release-lead{border-left:3px solid #c6ad76;padding:18px 24px;background:#edf4f2;line-height:1.85;color:#456477;margin:0 0 29px}
+.release-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.release-entry{background:#fff;border:1px solid #d7e4e2;padding:25px;min-width:0;box-shadow:0 3px 18px #14334d0c;display:flex;flex-direction:column;gap:13px}
+.release-entry.latest{border-top:4px solid #bca46e}
+.release-entry-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:11px;color:#8196a0}
+.release-status{font-size:10px;letter-spacing:.06em;color:#806a44}
+.release-entry h2{font:600 24px var(--serif);margin:0;color:#294f67;line-height:1.35}
+.release-entry h2 a{color:inherit;text-decoration:none}
+.release-entry p{color:#5a7682;font-size:13px;line-height:1.85;margin:0}
+.release-read{font-size:12px;color:#246e8a;margin-top:auto;text-underline-offset:4px}
+.release-source-link,.release-breadcrumb{font-size:12px;color:#728a95;margin:15px 0 26px;line-height:1.85}
+.release-source-link a,.release-breadcrumb a{color:#286b86;text-underline-offset:3px}
+.release-dateline{font-size:12px!important;color:#c6d7df!important}
+.release-lead{font:600 20px/1.8 var(--serif)}
+.release-story{max-width:820px;margin:0 auto 32px}
+.release-story>p,.release-chapter p{font-size:15px;line-height:2.05;color:#37566a;margin:15px 0}
+.release-chapter{margin:0 0 34px;padding:8px 0 0;border-bottom:1px solid #e0e8e7}
+.release-chapter h2{font:600 26px/1.45 var(--serif);color:#28536b;margin:8px 0 15px}
+.release-warning{max-width:850px;margin:20px auto 36px;border-left:4px solid #b19c78;background:#f7f3e9;padding:18px 24px;color:#5d5b4d;font-size:13px;line-height:1.9}
+.release-gallery{margin:37px auto 28px;max-width:960px}
+.release-gallery h2{font:600 25px var(--serif);color:#31566b}
+.release-gallery p{font-size:13px;color:#66828c;line-height:1.8}
+.release-gallery a{display:block;background:#edf2f2;border:1px solid #dce5e5;padding:9px;line-height:0}
+.release-gallery img{max-width:100%;width:100%;height:auto;display:block;object-fit:contain}
+.release-gallery small{display:block;text-align:right;font-size:11px;color:#78909b;margin-top:9px}
+.release-next{display:flex;flex-wrap:wrap;gap:11px;margin:31px 0}
+.release-next a{display:inline-block;padding:9px 13px;border:1px solid #c9dadf;background:#f3f8f8;color:#32657a;text-decoration:none;font-size:12px}
+.release-next a:hover,.release-next a:focus-visible{background:#e5f0ef;border-color:#a5c0c2}
+@media(max-width:900px){.release-cards{grid-template-columns:1fr}.release-entry{padding:22px}.release-main{padding:23px 0 64px}}
+@media(max-width:650px){.release-archive-note,.release-lead{padding:14px 17px}.release-chapter h2{font-size:23px}.release-chapter p{font-size:14px}.release-entry h2{font-size:21px}}
