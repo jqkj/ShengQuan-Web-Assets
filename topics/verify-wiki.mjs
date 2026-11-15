@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 const here=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(here,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const listing=read('topics/index.html');
-const matches=[...listing.matchAll(/<article class="topic-card"><a href="([^"]+\\.html)"/g)].map(x=>x[1]);
+const matches=[...listing.matchAll(/<article class="topic-card"><a href="([^"]+[.]html)"/g)].map(x=>x[1]);
 assert.equal(matches.length,35,'Expected 35 topic-card anchors');
 assert.equal(new Set(matches).size,matches.length,'Duplicate topic links');
 for(const entry of matches){
