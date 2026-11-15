@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "status": "Registry filename/path alignment confirmed; source DDS bytes not independently compared",
+  "source": "User's connected Google Drive reference library, modifiers folder",
+  "copyright": "Crusader Kings III © Paradox Interactive AB; no relicensing implied",
+  "original_game_binary_hash_verified": false,
+  "textures": [
+    {
+      "site_png": "icon_prestige_01.png",
+      "registry_macro": "prestige_icon",
+      "game_dds": "gfx/interface/icons/modifiers/icon_prestige_01.dds",
+      "dimensions": [
+        60,
+        60
+      ],
+      "kind": "default-resource-preview",
+      "extracted_png_reference": true
+    },
+    {
+      "site_png": "icon_piety_christian_01.png",
+      "registry_macro": "piety_icon",
+      "game_dds": "gfx/interface/icons/modifiers/icon_piety_christian_01.dds",
+      "dimensions": [
+        120,
+        120
+      ],
+      "kind": "default-resource-preview",
+      "extracted_png_reference": true
+    },
+    {
+      "site_png": "icon_dynasty_prestige_01.png",
+      "registry_macro": "dynasty_prestige_icon",
+      "game_dds": "gfx/interface/icons/modifiers/icon_dynasty_prestige_01.dds",
+      "dimensions": [
+        120,
+        120
+      ],
+      "kind": "default-resource-preview",
+      "extracted_png_reference": true
+    },
+    {
+      "site_png": "icon_influence_01.png",
+      "registry_macro": "influence_icon",
+      "game_dds": "gfx/interface/icons/modifiers/icon_influence_01.dds",
+      "dimensions": [
+        120,
+        120
+      ],
+      "kind": "default-resource-preview",
+      "extracted_png_reference": true
+    },
+    {
+      "site_png": "icon_piety_eastern_01.png",
+      "registry_macro": "piety_icon_eastern",
+      "game_dds": "gfx/interface/icons/modifiers/icon_piety_eastern_01.dds",
+      "dimensions": [
+        120,
+        120
+      ],
+      "kind": "religion-variant",
+      "extracted_png_reference": true
+    },
+    {
+      "site_png": "icon_piety_taoism_01.png",
+      "registry_macro": "piety_icon_taoism",
+      "game_dds": "gfx/interface/icons/modifiers/icon_piety_taoism_01.dds",
+      "dimensions": [
+        120,
+        120
+      ],
+      "kind": "religion-variant",
+      "extracted_png_reference": true
+    }
+  ]
+}

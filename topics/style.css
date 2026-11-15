@@ -67,3 +67,33 @@
 @media(max-width:650px){.ck3-reference-section{padding:22px 16px}.ck3-reference-grid{gap:9px}.ck3-flat-reference{padding:12px}.ck3-flat-image{width:58px;height:58px}.ck3-flat-image img{width:46px;height:46px}}
 
 .ck3-reference-subheading{font:600 18px var(--serif);color:#577181;border-bottom:1px solid #d8e3e3;padding-bottom:9px;margin:22px 0 13px}
+
+/* 2026-11-16: registry-matched coloured PNGs, variants, and keyboard-accessible search */
+.ck3-symbol[data-art="ck3"]{border:0;border-radius:0;background:none;box-shadow:none;overflow:visible}
+.ck3-symbol[data-art="ck3"] img{width:100%;height:100%;object-fit:contain;display:block;filter:none;max-width:100%}
+.resource-glossary-item .ck3-symbol[data-art="ck3"]{width:41px;height:41px;flex-basis:41px}
+.resource-glossary-item .ck3-symbol[data-art="ck3"] img{width:41px;height:41px}
+.wiki-icon-origin{display:block;font-size:10px;color:#697f86;margin-top:10px;line-height:1.55;border-top:1px solid #e3e9e7;padding-top:8px}
+.ck3-piety-section{margin-top:34px;padding:29px;border:1px solid #d6e3e1;border-top:3px solid #b6a27a;background:linear-gradient(115deg,#eef5f4,#fffdfa)}
+.ck3-piety-section h2{font:600 25px var(--serif);color:#315b68;margin:6px 0 9px}
+.ck3-piety-heading p:not(.eyebrow){font-size:13px;line-height:1.85;color:#667f89;margin:0 0 20px}
+.ck3-piety-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.ck3-piety-card{margin:0;border:1px solid #dde5e1;padding:16px;background:#fff;min-width:0;display:flex;align-items:center;gap:13px}
+.ck3-piety-card>img{width:67px;height:67px;object-fit:contain;flex:0 0 67px}
+.ck3-piety-card figcaption{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ck3-piety-card strong{font-size:13px;color:#355669;font-weight:700}
+.ck3-piety-card small{font-size:10px;color:#948358}
+.ck3-piety-card code{font-size:10px;color:#677f88;overflow-wrap:anywhere;line-height:1.55}
+.ck3-piety-card.is-missing::before{content:"—";color:#a0aaaa}
+.directory-group h2{display:flex;align-items:center;gap:12px}
+.wiki-group-icon{height:30px;width:30px;object-fit:contain;filter:invert(31%) sepia(14%) saturate(1200%) hue-rotate(134deg);flex:0 0 30px;opacity:.8}
+.wiki-search-field{display:flex;align-items:stretch;flex:1 1 280px;min-width:200px}
+.wiki-toolbar .wiki-search-field input{font:inherit;font-size:14px;flex:1;min-width:0;border:1px solid #aec7d2;border-right:0;border-radius:3px 0 0 3px;background:white;padding:8px 11px;min-height:41px;color:#1a4259}
+.wiki-search-clear{font:inherit;font-size:12px;border:1px solid #aec7d2;border-radius:0 3px 3px 0;background:#ecf2f0;color:#31566a;min-width:56px;padding:8px 10px;cursor:pointer}
+.wiki-search-clear:disabled{opacity:.5;cursor:default}
+.wiki-search-help{font-size:11px;color:#728894;flex:1 0 100%;margin:0!important}
+.wiki-empty-state{font-size:13px!important;color:#375568!important;flex:1 0 100%;padding:11px;border:1px dashed #aac2c6;background:#f7faf9;margin:0!important}
+.wiki-toolbar input:focus-visible,.wiki-search-clear:focus-visible,.wiki-filter:focus-visible,.language:focus-visible{outline:2px solid #2b7e99;outline-offset:2px}
+@media(max-width:900px){.ck3-piety-grid{grid-template-columns:1fr}.ck3-piety-card>img{width:55px;height:55px;flex-basis:55px}}
+@media(max-width:650px){.ck3-piety-section{padding:21px 17px}.wiki-search-field{flex:1 0 100%}.directory-group h2{gap:8px}.wiki-group-icon{width:24px;height:24px;flex-basis:24px}}
+@media(prefers-reduced-motion:reduce){.wiki-flat-preview-link{transition:none}}

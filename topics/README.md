@@ -33,3 +33,11 @@
 - 在相同 flat_icons 目录增补 8 个系统图标：faith、holy_order、culture、dynasty、county_control、development、army、council。
 - 资源词典现在按“资源与时间”（4 项）和“领地、信仰与军事系统”（8 项）分组，共 12 张。首页仅展示前 4 张，避免挤占专题导航。
 - 原版 GUI @texticon! 词典仍独立计 11 项；新增图像没有宣称等于对应的彩色文本宏。
+
+## 资源宏彩色 PNG 与检索体验（2026-11-16）
+- 从用户 Google Drive 的 CK3 `modifiers` 目录取得四种资源的同名 PNG 预览：威望、虔诚（默认基督教样式）、宗族威望、影响力；另展示 `piety_icon_eastern` 与 `piety_icon_taoism` 变体，共六张 PNG。
+- 在 `jesec/ck3-mod-base@master/base/game/gui/texticons.gui` / `texticons_religion.gui` 核对注册名与路径；只确认**名称、路径与视觉对应**，没有对 DDS 与 PNG 做二进制同源校验。
+- 官网 PNG 仅作为模组介绍中的资源参考图，属于 Paradox Interactive AB 的知识产权；不是本站自有素材，不是开放图片库，发布前仍应核查适用的授权条款。
+- `theme.js` 自动在有 PNG 的资源图例使用图片，在来源缺失或加载出错时退回站点 SVG；保留 11 项注册图例并明示图像来源状态。虔诚宗教变体独立展示，不会改变 `@piety_icon!` 在原版中的注册路径。
+- 目录搜索按实际条目数显示，支持中英双语关键词、多词匹配、快捷键 `/` 与 `Esc`、无结果提示和重置；各栏目使用匹配的扁平 UI 图案作为装饰。
+- 新增 `node topics/verify-wiki.mjs` 静态自检脚本（Node 18+），不依赖额外 npm 包。

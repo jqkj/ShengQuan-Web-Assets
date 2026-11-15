@@ -20,3 +20,7 @@ Additional system UI files:
 - development.png → gfx/interface/icons/flat_icons/development.dds
 - army.png → gfx/interface/icons/flat_icons/army.dds
 - council.png → gfx/interface/icons/flat_icons/council.dds
+
+## Color resource icon reference PNGs
+Six official-style resource PNG samples from the author's connected Google Drive `modifiers` directory live under `texticons/`. These file names were compared with CK3 game GUI registries, but DDS binary hashes were not compared to PNG content. Piety has different faith variants; the generic macro maps to Christian artwork.
+The author has not relicensed these images. Crusader Kings III artwork © Paradox Interactive AB; the images are displayed only in context of a noncommercial illustrated fan guide, not as an asset distribution service.

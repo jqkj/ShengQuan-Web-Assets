@@ -3,6 +3,10 @@
 "use strict";
 const ICONS=[{"id":"gold","zh":"金币","en":"Gold","macro":"gold_icon","texture":"gfx/interface/icons/icon_gold.dds","color":"#cda852","glyph":"●","description":"王朝经营与部分互动使用的金币。","enDescription":"A widely used currency in realm management and interactions.","group":"vanilla"},{"id":"prestige","zh":"威望","en":"Prestige","macro":"prestige_icon","texture":"gfx/interface/icons/modifiers/icon_prestige_01.dds","color":"#d0ab7c","glyph":"♛","description":"角色的世俗声望；例如骑士团召集可能花费威望。","enDescription":"An individual's secular standing, potentially used to rally knights.","group":"vanilla"},{"id":"piety","zh":"虔诚","en":"Piety","macro":"piety_icon","texture":"gfx/interface/icons/modifiers/icon_piety_christian_01.dds","color":"#8caec3","glyph":"✧","description":"宗教资源；游戏根据宗教有不同的图像变体。","enDescription":"Faith-linked resource; vanilla artwork varies by religion.","group":"vanilla"},{"id":"renown","zh":"宗族威望","en":"Dynasty Renown","macro":"dynasty_prestige_icon","texture":"gfx/interface/icons/modifiers/icon_dynasty_prestige_01.dds","color":"#90bda0","glyph":"♧","description":"宗族层面的名望，不等于个人威望。","enDescription":"Dynastic reputation, distinct from personal Prestige.","group":"vanilla"},{"id":"influence","zh":"影响力","en":"Influence","macro":"influence_icon","texture":"gfx/interface/icons/modifiers/icon_influence_01.dds","color":"#b29ccb","glyph":"✦","description":"部分政体使用的政治资源，并非所有角色都拥有。","enDescription":"A political currency restricted to relevant government mechanics.","group":"vanilla"},{"id":"prowess","zh":"勇武","en":"Prowess","macro":"skill_prowess_icon","texture":"gfx/interface/icons/icon_prowess.dds","color":"#9caec7","glyph":"⚔","description":"角色的战斗能力，是属性而不是可支付货币。","enDescription":"A combat attribute, not a spendable currency.","group":"vanilla"},{"id":"treasury","zh":"国库","en":"Treasury","macro":"treasury_icon","texture":"gfx/interface/icons/icon_imperial_treasury.dds","color":"#d0b68d","glyph":"▣","description":"本体登记的国库标识，是否出现取决于政体与玩法。","enDescription":"A registered treasury icon; its use depends on government and feature.","group":"vanilla"},{"id":"time","zh":"时间与冷却","en":"Time & Cooldown","macro":"time_icon","texture":"gfx/interface/icons/icon_time.dds","color":"#9ebac7","glyph":"⌛","description":"显示年限与冷却条件，不代表可支付资源。","enDescription":"Represents time and cooldowns, not spendable resources.","group":"vanilla"},{"id":"imperialGrace","zh":"帝国恩典","en":"Imperial Grace","macro":"imperial_grace","texture":"gfx/interface/icons/icon_imperial_grace.dds","color":"#cabb85","glyph":"☼","description":"原版登记名，不可直接等同阿斯塔特战士自身的恩典储量。","enDescription":"A base-game registry; not the same as each Astartes Warrior's personal Grace.","group":"vanilla"},{"id":"oathBlood","zh":"功业血纹","en":"Oath Blood","macro":"jic_oath_board_blood_icon","texture":"gfx/interface/illustrations/jic_oath_board/blood.dds","color":"#ba6979","glyph":"◆","description":"圣泉功业的自定义图标，不是 CK3 通用货币。","enDescription":"A custom Sacred Spring commission-system icon, not a vanilla currency.","group":"mod"},{"id":"oathToken","zh":"功业印记","en":"Oath Token","macro":"jic_oath_board_token_icon","texture":"gfx/interface/illustrations/jic_oath_board/token.dds","color":"#83baaa","glyph":"◇","description":"圣泉功业的自定义图标，不是 CK3 通用货币。","enDescription":"A custom Sacred Spring commission-system icon, not a vanilla currency.","group":"mod"}];
 const ICONMAP=Object.fromEntries(ICONS.map(x=>[x.id,x]));
+/* Exported PNG references match registered CK3 texture filenames, not binary DDS hashes. */
+const OFFICIAL_ICON_ARTWORK={"prestige":{"src":"../assets/ck3-ui/texticons/icon_prestige_01.png","gameTexture":"gfx/interface/icons/modifiers/icon_prestige_01.dds"},"piety":{"src":"../assets/ck3-ui/texticons/icon_piety_christian_01.png","gameTexture":"gfx/interface/icons/modifiers/icon_piety_christian_01.dds"},"renown":{"src":"../assets/ck3-ui/texticons/icon_dynasty_prestige_01.png","gameTexture":"gfx/interface/icons/modifiers/icon_dynasty_prestige_01.dds"},"influence":{"src":"../assets/ck3-ui/texticons/icon_influence_01.png","gameTexture":"gfx/interface/icons/modifiers/icon_influence_01.dds"}};
+const PIETY_VARIANTS=[{"id":"christian","zh":"基督教图例（通用默认）","en":"Christian (generic default)","macro":"piety_icon_christian","src":"../assets/ck3-ui/texticons/icon_piety_christian_01.png","texture":"gfx/interface/icons/modifiers/icon_piety_christian_01.dds"},{"id":"eastern","zh":"东方宗教","en":"Eastern faiths","macro":"piety_icon_eastern","src":"../assets/ck3-ui/texticons/icon_piety_eastern_01.png","texture":"gfx/interface/icons/modifiers/icon_piety_eastern_01.dds"},{"id":"taoism","zh":"道教","en":"Taoism","macro":"piety_icon_taoism","src":"../assets/ck3-ui/texticons/icon_piety_taoism_01.png","texture":"gfx/interface/icons/modifiers/icon_piety_taoism_01.dds"}];
+
 /* Flat UI reference PNGs are distinct from the color images referenced by @texticon! macros. */
 const FLAT_UI_REFERENCES=[{"id":"prestige","zh":"威望","en":"Prestige","group":"resource","src":"../assets/ck3-ui/flat/prestige.png","source":"gfx/interface/icons/flat_icons/prestige.dds"},{"id":"piety","zh":"虔诚","en":"Piety","group":"resource","src":"../assets/ck3-ui/flat/piety.png","source":"gfx/interface/icons/flat_icons/piety.dds"},{"id":"time","zh":"时间","en":"Time","group":"resource","src":"../assets/ck3-ui/flat/time.png","source":"gfx/interface/icons/flat_icons/time.dds"},{"id":"treasury","zh":"国库","en":"Treasury","group":"resource","src":"../assets/ck3-ui/flat/treasury.png","source":"gfx/interface/icons/flat_icons/treasury.dds"},{"id":"faith","zh":"信仰","en":"Faith","group":"system","src":"../assets/ck3-ui/flat/faith.png","source":"gfx/interface/icons/flat_icons/faith.dds"},{"id":"holy_order","zh":"修会","en":"Holy Order","group":"system","src":"../assets/ck3-ui/flat/holy_order.png","source":"gfx/interface/icons/flat_icons/holy_order.dds"},{"id":"culture","zh":"文化","en":"Culture","group":"system","src":"../assets/ck3-ui/flat/culture.png","source":"gfx/interface/icons/flat_icons/culture.dds"},{"id":"dynasty","zh":"宗族","en":"Dynasty","group":"system","src":"../assets/ck3-ui/flat/dynasty.png","source":"gfx/interface/icons/flat_icons/dynasty.dds"},{"id":"county_control","zh":"领地控制","en":"County Control","group":"system","src":"../assets/ck3-ui/flat/county_control.png","source":"gfx/interface/icons/flat_icons/county_control.dds"},{"id":"development","zh":"发展度","en":"Development","group":"system","src":"../assets/ck3-ui/flat/development.png","source":"gfx/interface/icons/flat_icons/development.dds"},{"id":"army","zh":"军队","en":"Army","group":"system","src":"../assets/ck3-ui/flat/army.png","source":"gfx/interface/icons/flat_icons/army.dds"},{"id":"council","zh":"议会","en":"Council","group":"system","src":"../assets/ck3-ui/flat/council.png","source":"gfx/interface/icons/flat_icons/council.dds"}];
 function flatReferenceImage(item){
@@ -20,7 +24,12 @@ const resourceGeometry={"gold":"<circle cx=\"10\" cy=\"11\" r=\"6.9\"/><circle c
 function symbol(id){
  const cfg=ICONMAP[id],node=document.createElement("span");node.className="ck3-symbol";node.dataset.icon=id;
  node.style.setProperty("--ck3-color",cfg.color);node.setAttribute("aria-hidden","true");
- node.innerHTML='<svg viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65">'+resourceGeometry[id]+"</g></svg>";
+ const fallback=()=>{node.dataset.art="site";node.innerHTML='<svg viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65">'+resourceGeometry[id]+"</g></svg>";};
+ const art=OFFICIAL_ICON_ARTWORK[id];
+ if(!art){fallback();return node;}
+ const pic=document.createElement("img");pic.src=art.src;pic.alt="";pic.width=60;pic.height=60;pic.decoding="async";
+ pic.addEventListener("error",fallback,{once:true});
+ node.dataset.art="ck3";node.append(pic);
  return node;
 }
 function chip(id){
@@ -53,21 +62,26 @@ function articlePanel(){
  if(relevant.length){const line=document.createElement("div");line.className="wiki-resource-row";const strong=document.createElement("strong");strong.innerHTML=tr("本文涉及","Mentioned resources");line.append(strong);
  const icons=document.createElement("div");icons.className="wiki-resource-chips";relevant.forEach(k=>icons.append(chip(k)));line.append(icons);panel.append(line);}
  else{const hint=document.createElement("p");hint.innerHTML=tr("这篇主要介绍人物、身份或安装事项，没有固定的通用货币清单。","This topic focuses on roles or guidance, with no universal currency list.");panel.append(hint);}
- const fine=document.createElement("p");fine.className="wiki-resource-note";fine.innerHTML=tr("仅表示文本涉及的资源或属性，并非固定消耗、奖励或保底。本站使用自绘示意图，不是官方 DDS 原图；金额与条件以游戏为准。","Mentioned terms are not guaranteed costs, rewards or drop rates. These are original site glyphs, not the official DDS images; check the game for precise values.");panel.append(fine);
+ const fine=document.createElement("p");fine.className="wiki-resource-note";fine.innerHTML=tr("仅表示本文提及的资源或属性，不保证消耗、收益或触发；部分图像来自已核对名称的 CK3 PNG 参考，其余为本站示意图。以游戏内实际数值为准。","Only identifies terms in this article, not guaranteed costs or rewards. Some icons use file-matched CK3 PNG references; others are original pictograms. Check actual in-game values.");panel.append(fine);
  article.insertBefore(panel,article.firstChild);
+ const toc=document.querySelector(".toc-links");if(toc){const a=document.createElement("a");a.href="#resources";a.innerHTML=tr("资源速览","Resource overview");toc.prepend(a);}
 }
 function annotateValues(){
- const cn=/([0-9][0-9,.]*)(\s*)(宗族威望|金币|威望|虔诚|影响力|勇武)/;
- const en=/([0-9][0-9,.]*)(\s+)(Gold|Prestige|Piety|Renown|Influence|Prowess)\b/i;
+ const cn=/([+\-−]?\d[\d,.]*)(\s*)(宗族威望|金币|威望|虔诚|影响力|勇武)/g;
+ const en=/([+\-−]?\d[\d,.]*)(\s+)(Gold|Prestige|Piety|Renown|Influence|Prowess)\b/gi;
  const lookup={金币:"gold",威望:"prestige",虔诚:"piety",宗族威望:"renown",影响力:"influence",勇武:"prowess",gold:"gold",prestige:"prestige",piety:"piety",renown:"renown",influence:"influence",prowess:"prowess"};
  for(const el of document.querySelectorAll(".quick dd,.rule-content p,.ability p,.ability li")){
   const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[];while(walker.nextNode()){const n=walker.currentNode;if(!n.parentElement?.closest("a,code,pre,summary,svg,.wiki-resource-number"))nodes.push(n);}
-  let used=0;
-  for(const n of nodes){if(used>=2)break;const value=n.nodeValue||"",english=!!n.parentElement?.closest(".en"),match=value.match(english?en:cn);if(!match)continue;
-   const key=lookup[english?match[3].toLowerCase():match[3]];if(!key)continue;
-   const i=match.index,frag=document.createDocumentFragment(),span=document.createElement("span");span.className="wiki-resource-number";span.append(symbol(key),document.createTextNode(match[0]));
-   frag.append(document.createTextNode(value.slice(0,i)),span,document.createTextNode(value.slice(i+match[0].length)));
-   n.parentNode.replaceChild(frag,n);used++;
+  for(const n of nodes){
+   const value=n.nodeValue||"",english=!!n.parentElement?.closest(".en"),regex=english?en:cn;
+   regex.lastIndex=0;let match,cursor=0,count=0;const frag=document.createDocumentFragment();
+   while((match=regex.exec(value))){
+    const key=lookup[english?match[3].toLowerCase():match[3]];if(!key)continue;
+    frag.append(document.createTextNode(value.slice(cursor,match.index)));
+    const tag=document.createElement("span");tag.className="wiki-resource-number";tag.append(symbol(key),document.createTextNode(match[0]));frag.append(tag);
+    cursor=match.index+match[0].length;count++;
+   }
+   if(count){frag.append(document.createTextNode(value.slice(cursor)));n.parentNode.replaceChild(frag,n);}
   }
  }
 }
@@ -76,7 +90,7 @@ function directory(){
  const catalog=document.createElement("section");catalog.className="wiki-resource-catalog";
  const heading=document.createElement("h2");heading.innerHTML=tr("CK3 资源速查","CK3 resource index");catalog.append(heading);
  const icons=document.createElement("div");icons.className="wiki-resource-chips";["gold","prestige","piety","renown","influence","prowess"].forEach(k=>icons.append(chip(k)));catalog.append(icons);
- const caption=document.createElement("p");caption.innerHTML=tr('注册名依照 CK3 本体；矢量图案由本站绘制。<a href="resources.html">查看完整图例 ↗</a>','Icon registries from CK3; site-drawn glyphs. <a href="resources.html">Full glossary ↗</a>');
+ const caption=document.createElement("p");caption.innerHTML=tr('注册名对照 CK3：可用素材显示游戏原图参考，缺失图像保留本站 SVG。<a href="resources.html">查看全部图例 ↗</a>','CK3 registry-matched PNGs where available, original SVG fallback otherwise. <a href="resources.html">Full glossary ↗</a>');
  catalog.append(caption);
  const preview=document.createElement("div");preview.className="wiki-flat-preview";
  const previewTitle=document.createElement("strong");previewTitle.innerHTML=tr("原版 UI 图案 · 扁平图标参考","Vanilla UI emblems · flat-icon samples");preview.append(previewTitle);
@@ -86,25 +100,63 @@ function directory(){
  const previewNote=document.createElement("small");previewNote.innerHTML=tr("仅作界面装饰参考，不是上方 @texticon! 的彩色贴图。","UI emblem references only, not the color artwork for the @texticon! macros above.");preview.append(previewNote);
  catalog.append(preview);note.after(catalog);
  const toolbar=document.createElement("section");toolbar.className="wiki-toolbar";
- toolbar.innerHTML='<label for="wiki-search">'+tr("检索 35 篇专题","Search 35 guides")+'</label><input id="wiki-search" type="search" autocomplete="off"><div class="wiki-filters" role="group" aria-label="Topic categories"></div><p class="wiki-filter-count" aria-live="polite"></p>';
+ toolbar.innerHTML='<label for="wiki-search">'+tr("搜索专题","Search guides")+'</label><div class="wiki-search-field"><input id="wiki-search" type="search" autocomplete="off" placeholder="搜索关键词 / Search"><button class="wiki-search-clear" type="button">'+tr("重置","Reset")+'</button></div><div class="wiki-filters" role="group" aria-label="Topic categories"></div><p class="wiki-filter-count" aria-live="polite"></p><p class="wiki-search-help">'+tr("支持中文或英文关键词；按 / 聚焦搜索，Esc 清空。","Search in Chinese or English; press / to focus and Esc to clear.")+'</p><p class="wiki-empty-state" hidden>'+tr("没有找到匹配专题，请尝试简短关键词或重置筛选。","No matching topics. Try a shorter keyword or reset the filters.")+'</p>';
  catalog.after(toolbar);
  const names=[["all","全部","All"],["core","主模组","Core"],["roles","五种职业","Roles"],["expansion","独立扩展","Expansions"],["support","支持资料","Support"]];
  const buttons=toolbar.querySelector(".wiki-filters");let active="all",query="";
  names.forEach(([id,zh,en])=>{const button=document.createElement("button");button.type="button";button.className="wiki-filter";button.dataset.filter=id;button.setAttribute("aria-pressed",id===active?"true":"false");button.innerHTML=tr(zh,en);button.addEventListener("click",()=>{active=id;refresh()});buttons.append(button)});
- groups.forEach((g,i)=>g.dataset.section=i<4?"core":i===4?"roles":i===5?"expansion":"support");
- const input=toolbar.querySelector("input");input.addEventListener("input",()=>{query=input.value.trim().toLocaleLowerCase();refresh()});
- function refresh(){let total=0;
-  groups.forEach(g=>{let shown=0;g.querySelectorAll(".topic-card").forEach(card=>{
-   const match=(active==="all"||g.dataset.section===active)&&(!query||card.textContent.toLocaleLowerCase().includes(query));card.hidden=!match;if(match){shown++;total++;}});g.hidden=shown===0;});
+ groups.forEach((g,i)=>{
+  g.dataset.section=g.dataset.topicGroup||(i<4?"core":i===4?"roles":i===5?"expansion":"support");
+  const ui=FLAT_UI_REFERENCES.find(x=>x.id===g.dataset.uiIcon),heading=g.querySelector("h2");
+  if(ui&&heading){const ico=flatReferenceImage(ui);ico.className="wiki-group-icon";ico.alt="";ico.loading="lazy";heading.prepend(ico);}
+ });
+ const input=toolbar.querySelector("input"),clear=toolbar.querySelector(".wiki-search-clear");
+ const cards=groups.reduce((total,g)=>total+g.querySelectorAll(".topic-card").length,0);
+ input.addEventListener("input",refresh);
+ clear.addEventListener("click",()=>{input.value="";active="all";refresh();input.focus();});
+ document.addEventListener("keydown",event=>{
+  const target=event.target,editable=target&&((target.tagName==="INPUT")||(target.tagName==="TEXTAREA")||target.isContentEditable);
+  if(event.key==="/"&&!editable&&!event.ctrlKey&&!event.metaKey&&!event.altKey){event.preventDefault();input.focus();}
+  if(event.key==="Escape"&&document.activeElement===input){input.value="";refresh();input.blur();}
+ });
+ function refresh(){
+  const tokens=input.value.normalize("NFKC").toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
+  let total=0;
+  groups.forEach(g=>{
+   let shown=0;g.querySelectorAll(".topic-card").forEach(card=>{
+    const hay=card.textContent.normalize("NFKC").toLocaleLowerCase();
+    const visible=(active==="all"||g.dataset.section===active)&&tokens.every(word=>hay.includes(word));
+    card.hidden=!visible;if(visible){shown++;total++;}
+   });g.hidden=shown===0;
+  });
   buttons.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.filter===active?"true":"false"));
-  toolbar.querySelector(".wiki-filter-count").textContent=lastLang==="en"?"Showing "+total+" / 35 independent guides":"显示 "+total+" / 35 篇独立专题";
+  toolbar.querySelector(".wiki-filter-count").textContent=lastLang==="en"?"Showing "+total+" of "+cards+" guides":"显示 "+total+" / "+cards+" 篇专题";
+  toolbar.querySelector(".wiki-empty-state").hidden=total!==0;
+  clear.disabled=!tokens.length&&active==="all";
  }
  window.SQ_WIKI_REFRESH=refresh;refresh();
 }
 function glossary(){
  const host=document.querySelector("[data-wiki-catalog]");
- if(host)host.querySelectorAll("[data-glyph]").forEach(slot=>{const id=slot.dataset.glyph;if(ICONMAP[id])slot.append(symbol(id))});
- const references={resource:document.querySelector('[data-ck3-flat="resource"]'),system:document.querySelector('[data-ck3-flat="system"]')};if(!references.resource||!references.system)return;
+ if(host)host.querySelectorAll("[data-glyph]").forEach(slot=>{
+  const id=slot.dataset.glyph;if(!ICONMAP[id])return;slot.append(symbol(id));
+  const card=slot.closest(".resource-glossary-item");if(!card)return;
+  const status=document.createElement("small");status.className="wiki-icon-origin";
+  status.innerHTML=OFFICIAL_ICON_ARTWORK[id]?tr("CK3 PNG 对照预览 · 非 DDS 原文件","CK3 PNG reference · not the DDS binary"):tr("本站原创示意符号 · 待匹配原图","Original site pictogram · awaiting source artwork");
+  card.append(status);
+ });
+ const variants=document.querySelector("[data-piety-variants]");
+ if(variants)PIETY_VARIANTS.forEach(item=>{
+  const fig=document.createElement("figure");fig.className="ck3-piety-card";
+  const img=document.createElement("img");img.src=item.src;img.width=120;img.height=120;img.loading="lazy";img.decoding="async";img.alt="";
+  img.addEventListener("error",()=>{img.hidden=true;fig.classList.add("is-missing");},{once:true});fig.append(img);
+  const cap=document.createElement("figcaption");
+  const title=document.createElement("strong");title.innerHTML=tr(item.zh,item.en);cap.append(title);
+  const macro=document.createElement("small");macro.textContent="@"+item.macro+"!";cap.append(macro);
+  const code=document.createElement("code");code.textContent=item.texture;cap.append(code);fig.append(cap);variants.append(fig);
+ });
+ const references={resource:document.querySelector('[data-ck3-flat="resource"]'),system:document.querySelector('[data-ck3-flat="system"]')};
+ if(!references.resource||!references.system)return;
  FLAT_UI_REFERENCES.forEach(item=>{
   const figure=document.createElement("figure");figure.className="ck3-flat-reference";
   const thumb=document.createElement("div");thumb.className="ck3-flat-image";thumb.append(flatReferenceImage(item));figure.append(thumb);
@@ -116,5 +168,5 @@ articlePanel();annotateValues();directory();glossary();
 const progress=document.querySelector(".progress");let scheduled=false;
 function onScroll(){if(progress){const limit=document.documentElement.scrollHeight-innerHeight;progress.style.width=(limit>0?Math.min(100,window.scrollY/limit*100):0).toFixed(2)+"%"}scheduled=false;}
 addEventListener("scroll",()=>{if(!scheduled){scheduled=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
-window.SQ_WIKI_RESOURCE_TEST={iconKeys:ICONS.map(x=>x.macro),iconCount:ICONS.length,originalArtwork:true,flatIconCount:FLAT_UI_REFERENCES.length,flatIconKind:"ui-flat-not-texticon",topicCards:document.querySelectorAll(".topic-card").length};
+window.SQ_WIKI_RESOURCE_TEST={iconKeys:ICONS.map(x=>x.macro),iconCount:ICONS.length,originalArtwork:true,registeredPngCount:Object.keys(OFFICIAL_ICON_ARTWORK).length,pietyVariantCount:PIETY_VARIANTS.length,flatIconCount:FLAT_UI_REFERENCES.length,flatIconKind:"ui-flat-not-texticon",topicCards:document.querySelectorAll(".topic-card").length};
 })();

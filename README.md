@@ -83,9 +83,9 @@ Each article has its own HTML path, reviewed Chinese narrative and a mechanicall
 - `assets/v1/*.webp` — 网站封面、缩略图、截图与背景 / optimized covers, thumbnails, screenshots, and backgrounds.
 - `asset_manifest.json` — 图片资源路径索引 / image asset manifest.
 
-大图片通过独立文件和 CDN 按需加载，小图标保留在 HTML 中。网站仍由 Muse 单独发布；**提交到 GitHub 不会自动更新 Muse 线上页面**。
+大图片通过独立文件按需加载；单文件主站保留内联小图标，独立专题站点另设 `assets/ck3-ui/` 图例（含原版路径对照 PNG 与本站原创图形的回退）。网站仍由 Muse 单独发布；**提交到 GitHub 不会自动更新 Muse 线上页面**。
 
-Large images are delivered separately for on-demand loading and caching, while small icons remain embedded. The live site is published through Muse; **commits to this repository do not automatically update the Muse website**.
+Large artwork is served separately. The single-file site keeps inline decorative glyphs, while the standalone compendium uses verified-file-name CK3 PNG samples with original pictogram fallbacks. The live site is published through Muse; **commits to this repository do not automatically update the Muse website**.
 
 ## 版权与声明 / Copyright & Disclaimer
 
@@ -96,3 +96,5 @@ Large images are delivered separately for on-demand loading and caching, while s
 *Sheng Quan Chuan Shuo* is an unofficial, non-commercial fan project and is not affiliated with or endorsed by Paradox Interactive or Games Workshop. Third-party intellectual property and trademarks remain with their respective owners. Some illustrations were created with AI assistance; applicable rights may vary by jurisdiction.
 
 **Public access is not an open-content license.** No general permission is granted to reproduce, redistribute, modify, or commercially exploit original project artwork. Third-party material remains subject to its respective rights and terms.
+
+**图标回审 / Icon audit:** [色彩图例、虔诚变体与 UI 扁平图标](topics/resources.html) · [静态检查](topics/verify-wiki.mjs)。
