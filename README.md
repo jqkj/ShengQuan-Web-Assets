@@ -70,22 +70,22 @@ This repository contains the **bilingual showcase website and public-facing visu
 
 **[湖畔诸事 · 35 篇独立专题页](topics/index.html)** · [CK3 货币与图标词典](topics/resources.html) · [专题维护与部署说明](topics/README.md)
 
-网站现已提供 `topics/` 专题目录：30 个功能与支持主题、5 个阿斯塔特职业分别具有独立的 HTML 页面。例如 [圣泉骑士团](topics/m9.html)、[泉水血脉](topics/m2.html)、[阿斯塔特药剂师](topics/profession-apothecary.html)。每篇保留已核对的中文长文、英文旧稿、可展开的操作规则、关联主题与状态提醒。英文目前尚未完成与最新中文修订的全量同步复审。
+仓库保留 `topics/` 作为**多文件静态主机的辅助源码与独立页面档案**；Muse 实际发布仅使用根目录 `index.html`，其中通过 `#m9` 等站内路由直接阅读全部 30 个功能与支持主题、5 个阿斯塔特职业。例如 [圣泉骑士团](topics/m9.html)、[泉水血脉](topics/m2.html)、[阿斯塔特药剂师](topics/profession-apothecary.html)。每篇保留已核对的中文长文、英文旧稿、可展开的操作规则、关联主题与状态提醒。英文目前尚未完成与最新中文修订的全量同步复审。
 
-**发布注意：** 这些页面须在提供 `topics/` 与 `assets/v1/` 的多文件静态主机上部署。它们不是 Muse 上线的独立页面；现有 Muse 仍依赖仓库根目录的单文件 `index.html`，提交 GitHub 不会自动发布 Muse，也未验证 GitHub Pages 是否启用。
+**Muse 发布规则：** 每个 Muse 空间只接受一个 HTML：复制或上传仓库根目录 `index.html`，不发布 `topics/*.html`、`versions/*.html`、外链 CSS 或 JavaScript。专题、资源词典与版本均使用单 HTML 的 `#` 路由；照片、CK3 PNG 和实机截图由 GitHub CDN 提供。GitHub 提交不会自动同步 Muse。
 
 **[Standalone feature compendium: 35 individual articles](topics/index.html)** · [Deployment notes](topics/README.md)
 
-Each article has its own HTML path, reviewed Chinese narrative and a mechanically focused appendix. English content is retained but has not been fully re-reviewed against the latest Chinese revisions. Host the `topics/` directory alongside the existing assets on a multi-file static host; changes here do not automatically deploy to Muse.
+The `topics/` pages are retained for an optional multi-file host and source comparison. **Muse runs solely from the self-contained root `index.html`**: all 35 guide routes, release notes and the resource glossary are inside that one file. Browser images are served from GitHub CDN. The old standalone HTML files are not required for Muse.
 
 
 - `index.html` — 中英文介绍网站 / bilingual project website.
 - `assets/v1/*.webp` — 网站封面、缩略图、截图与背景 / optimized covers, thumbnails, screenshots, and backgrounds.
 - `asset_manifest.json` — 图片资源路径索引 / image asset manifest.
 
-大图片通过独立文件按需加载；单文件主站保留内联小图标，独立专题站点另设 `assets/ck3-ui/` 图例（含原版路径对照 PNG 与本站原创图形的回退）。网站仍由 Muse 单独发布；**提交到 GitHub 不会自动更新 Muse 线上页面**。
+Muse 主站的所有大图、实机截图、CK3 资源 PNG 均使用 GitHub 图床按需加载；48 枚自绘 SVG 的深浅主题 PNG 在浏览器内按需生成，不再在主 HTML 内重复内嵌 480 张 PNG。少量品牌 favicon 和装饰 SVG 仍保留内联，以保障单文件发布。网站仍由 Muse 单独发布；**提交到 GitHub 不会自动更新 Muse 线上页面**。
 
-Large artwork is served separately. The single-file site keeps inline decorative glyphs, while the standalone compendium uses verified-file-name CK3 PNG samples with original pictogram fallbacks. The live site is published through Muse; **commits to this repository do not automatically update the Muse website**.
+Large artwork and CK3 PNG references load from GitHub. The Muse single-file guide has 35 hash-based routes, and its 48 SVG icon designs can be exported to transparent PNG on demand, without embedding 480 raster copies. Only small brand graphics and SVG definitions remain inline. The live site is published through Muse; **commits to this repository do not automatically update the Muse website**.
 
 ## 版权与声明 / Copyright & Disclaimer
 
@@ -100,3 +100,6 @@ Large artwork is served separately. The single-file site keeps inline decorative
 **图标回审 / Icon audit:** [色彩图例、虔诚变体与 UI 扁平图标](topics/resources.html) · [静态检查](topics/verify-wiki.mjs)。
 
 **玩家版更新日志 / Player-readable releases:** [独立版本目录](versions/index.html) · [V3.1.6.1 泉水之龙](versions/3.1.6.1.html) · [V3.1.6 余烬不熄](versions/3.1.6.html)。
+
+
+**Muse 单文件发布 / Single-file publishing:** [发布约定与回归清单](MUSE_SINGLE_HTML.md) · [静态校验脚本](scripts/verify-muse-single-html.mjs)。
