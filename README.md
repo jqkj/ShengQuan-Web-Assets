@@ -64,6 +64,8 @@ This repository contains the **bilingual showcase website and public-facing visu
 
 **Important:** The GitHub repository stores source files and public assets. Updating GitHub does **not** automatically publish changes to the Muse-hosted live site.
 
+**独立版本网页 / Standalone release pages:** [更新目录](versions/index.html) · [V3.1.6.1](versions/3.1.6.1.html)。这些是 Git 中新增的静态 HTML，需另行发布到支持静态文件的站点；Muse 目前仍使用单页 `#versions` 路由。
+
 ## 网站资源 / Website Assets
 
 - `index.html` — 中英文介绍网站 / bilingual project website.

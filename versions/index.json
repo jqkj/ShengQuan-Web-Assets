@@ -11,7 +11,8 @@
       "title_zh": "泉水之龙",
       "title_en": "Spring Dragon",
       "document": "versions/3.1.6.1.md",
-      "gallery": "assets/releases/3.1.6.1/dragon-horns-gallery.avif"
+      "gallery": "assets/releases/3.1.6.1/dragon-horns-gallery.avif",
+      "page": "versions/3.1.6.1.html"
     },
     {
       "version": "3.1.6",
@@ -19,7 +20,8 @@
       "id": "v316",
       "title_zh": "余烬不熄",
       "title_en": "Embers Endure",
-      "document": "versions/3.1.6.md"
+      "document": "versions/3.1.6.md",
+      "page": "versions/3.1.6.html"
     },
     {
       "version": "3.1.5",
@@ -27,7 +29,9 @@
       "id": "update315",
       "title_zh": "圣泉功业与精钢军械",
       "title_en": "Sacred Spring Deeds & Refined Steel",
-      "document": "versions/3.1.5.md"
+      "document": "versions/3.1.5.md",
+      "page": "versions/3.1.5.html"
     }
-  ]
+  ],
+  "static_archive": "versions/index.html"
 }
