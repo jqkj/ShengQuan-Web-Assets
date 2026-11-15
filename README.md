@@ -72,9 +72,9 @@ This repository contains the **bilingual showcase website and public-facing visu
 - `assets/v1/*.webp` — 网站封面、缩略图、截图与背景 / optimized covers, thumbnails, screenshots, and backgrounds.
 - `asset_manifest.json` — 图片资源路径索引 / image asset manifest.
 
-大图片通过独立文件和 CDN 按需加载，小图标保留在 HTML 中。网站仍由 Muse 单独发布；**提交到 GitHub 不会自动更新 Muse 线上页面**。
+大图片通过独立文件和 CDN 按需加载，常用 SVG 图标保留在 HTML 中，480 份 PNG 图标下载资源已经迁移到 `assets/v1/icon-png-data.js`，仅在玩家点击 PNG 下载时加载。网站仍由 Muse 单独发布；**提交到 GitHub 不会自动更新 Muse 线上页面**。
 
-Large images are delivered separately for on-demand loading and caching, while small icons remain embedded. The live site is published through Muse; **commits to this repository do not automatically update the Muse website**.
+Large images are delivered separately, SVG icons remain embedded, and all 480 original PNG export variants live in `assets/v1/icon-png-data.js` for download-on-demand. The live site is published through Muse; **commits to this repository do not automatically update the Muse website**.
 
 ## 版权与声明 / Copyright & Disclaimer
 
