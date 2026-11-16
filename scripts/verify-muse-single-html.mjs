@@ -107,6 +107,6 @@ for(const expr of [
  "$$('[data-muse-card]',group).forEach",
  "$$('[data-muse-filter]').forEach"
 ])assert.ok(filterSource.includes(expr),'Compendium iteration must use $$: '+expr);
-assert.ok(!/\$(?!\$)\([^\n]+\)\.forEach/.test(filterSource),'Single-element helper $ cannot be iterated');
+assert.ok(!/(^|[^$])\$\([^\n]+\)\.forEach/m.test(filterSource),'Single-element helper $ cannot be iterated');
 
 console.log('PASS Muse single HTML: 35 guides, 3 releases, 11-macro glossary, 48 SVGs, 0 embedded PNG exports, '+Object.keys(assets).length+' GitHub image URLs');
