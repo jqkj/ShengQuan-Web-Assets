@@ -70,4 +70,29 @@ for(const entry of archive.entries){
  assert.ok(archiveHtml.includes('href="'+entry.version+'.html"'),'Release archive index missing link: '+entry.version);
 }
 
+
+// Copy-Issue integration invariant: every public guide retains one canonical site narrative.
+const issueTopicRoutes=[...Object.keys(site.routes),...site.professions.map(p=>'profession-'+p.id)];
+assert.equal(issueTopicRoutes.length,35,'35 Issue guides not represented');
+assert.equal(new Set(issueTopicRoutes).size,35,'Duplicate Issue topic route');
+for(const [id,entry] of Object.entries(site.routes)){
+ assert.ok(Array.isArray(entry.narrative)&&entry.narrative.length>0,'Missing narrative: '+id);
+ assert.equal(entry.story,entry.narrative.join('\n\n'),'Search/fallback copy differs from displayed narrative: '+id);
+ assert.ok(fs.existsSync(path.join(root,'topics',id+'.html')),'Missing standalone topic: '+id);
+}
+for(const role of site.professions){
+ assert.ok(fs.existsSync(path.join(root,'topics','profession-'+role.id+'.html')),'Missing role article: '+role.id);
+}
+for(const id of ['c1','c2','c3','c4','c5']){
+ assert.equal(site.routes[id].status,'candidate','Chaos guide not marked candidate: '+id);
+ assert.match(site.routes[id].summary,/测试候选/,'Chaos summary needs visible candidate qualifier: '+id);
+}
+assert.match(site.routes.m8.story,/蒙养学段考核/,'Academy hook milestone misrepresented');
+assert.match(site.routes.m9.story,/召集加入战争/,'Knight mobilization should describe actual interaction');
+assert.match(site.routes.m7.caution,/不等于所有个人免费抽取资格/,'Covenant inheritance caveat missing');
+assert.match(site.routes.m16.summary,/14种精钢军械/,'Newly craftable steel count missing');
+assert.match(site.routes.status.summary,/main 描述文件仍为 V3\.1\.6/,'GitHub branch and Workshop status conflated');
+assert.ok(!site.routes.unknown.story.includes('且未婚未成阿斯塔特'),'Invented implantation marriage restriction');
+assert.match(site.routes.unknown.story,/未婚/,'FAQ correction needs explanatory context');
+
 console.log('PASS Muse single HTML: 35 guides, 3 releases, 11-macro glossary, 48 SVGs, 0 embedded PNG exports, '+Object.keys(assets).length+' GitHub image URLs');
