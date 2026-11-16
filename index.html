@@ -625,14 +625,14 @@ function renderMuseCompendium(){
 function filterMuseCompendium(){
  const search=$('#muse-guide-search');if(!search)return;
  const tokens=search.value.normalize('NFKC').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);let total=0,visible=0;
- $('[data-muse-group]',main).forEach(group=>{
+ $$('[data-muse-group]',main).forEach(group=>{
   let inGroup=0;
-  $('[data-muse-card]',group).forEach(card=>{
+  $$('[data-muse-card]',group).forEach(card=>{
    total++;const show=(museGuideFilter==='all'||group.dataset.museGroup===museGuideFilter)&&tokens.every(token=>(card.dataset.museSearch||'').includes(token));
    card.hidden=!show;if(show){visible++;inGroup++;}
   });group.hidden=inGroup===0;
  });
- $('[data-muse-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.museFilter===museGuideFilter)));
+ $$('[data-muse-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.museFilter===museGuideFilter)));
  if($('#muse-guide-count'))$('#muse-guide-count').textContent=l('显示 '+visible+' / '+total+' 篇','Showing '+visible+' / '+total+' guides');
  if($('#muse-guide-empty'))$('#muse-guide-empty').hidden=visible>0;
 }
