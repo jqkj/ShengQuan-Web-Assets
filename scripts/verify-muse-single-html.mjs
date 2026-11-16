@@ -95,4 +95,18 @@ assert.match(site.routes.status.summary,/main 描述文件仍为 V3\.1\.6/,'GitH
 assert.ok(!site.routes.unknown.story.includes('且未婚未成阿斯塔特'),'Invented implantation marriage restriction');
 assert.match(site.routes.unknown.story,/未婚/,'FAQ correction needs explanatory context');
 
+
+// Issue #39: compendium uses the plural DOM helper for three collection traversals.
+const filterStart=html.indexOf('function filterMuseCompendium(){');
+assert.ok(filterStart>=0,'Missing compendium filter');
+const filterEnd=html.indexOf('\nfunction ',filterStart+30);
+assert.ok(filterEnd>filterStart,'Cannot isolate compendium filter');
+const filterSource=html.slice(filterStart,filterEnd);
+for(const expr of [
+ "$$('[data-muse-group]',main).forEach",
+ "$$('[data-muse-card]',group).forEach",
+ "$$('[data-muse-filter]').forEach"
+])assert.ok(filterSource.includes(expr),'Compendium iteration must use $$: '+expr);
+assert.ok(!/(^|[^$])\$\([^\n]+\)\.forEach/m.test(filterSource),'Single-element helper $ cannot be iterated');
+
 console.log('PASS Muse single HTML: 35 guides, 3 releases, 11-macro glossary, 48 SVGs, 0 embedded PNG exports, '+Object.keys(assets).length+' GitHub image URLs');
