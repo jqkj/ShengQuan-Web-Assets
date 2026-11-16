@@ -40,4 +40,34 @@ assert.ok(codeStart>=0&&codeEnd>codeStart,'Main JS missing');
 new Script(html.slice(codeStart+8,codeEnd),{filename:'index.html#app'});
 const groupCount=site.groups.reduce((sum,g)=>sum+g.routes.length,0);
 assert.equal(groupCount+site.professions.length+6+6,35,'Expected 35 compendium entries');
+
+// Release archive metadata is a static-host index, not a dependency of the Muse HTML.
+const archive=JSON.parse(fs.readFileSync(path.join(root,'versions/index.json'),'utf8'));
+assert.equal(archive.current,site.releases[0].version,'Latest release differs from archive');
+assert.equal(archive.entries.length,site.releases.length,'Release archive and Muse entries differ');
+assert.equal(archive.static_archive,'versions/index.html','Missing static archive index');
+const archivePage=path.join(root,archive.static_archive);
+assert.ok(fs.existsSync(archivePage),'Missing static archive index HTML');
+const archiveHtml=fs.readFileSync(archivePage,'utf8');
+const seenVersions=new Set();
+for(const entry of archive.entries){
+ assert.ok(!seenVersions.has(entry.version),'Duplicate archive version: '+entry.version);
+ seenVersions.add(entry.version);
+ const muse=site.releases.find(item=>item.version===entry.version);
+ assert.ok(muse,'Archive version missing from Muse: '+entry.version);
+ assert.equal(entry.id,muse.id,'Release route ID mismatch: '+entry.version);
+ assert.equal(entry.date,muse.date,'Release date mismatch: '+entry.version);
+ assert.equal(entry.title_zh,muse.zh.title,'Chinese release title mismatch: '+entry.version);
+ assert.equal(entry.title_en,muse.en.title,'English release title mismatch: '+entry.version);
+ assert.equal(entry.page,'versions/'+entry.version+'.html','Unexpected static page path');
+ assert.equal(entry.document,'versions/'+entry.version+'.md','Unexpected source note path');
+ for(const rel of [entry.page,entry.document])assert.ok(fs.existsSync(path.join(root,rel)),'Missing archive file: '+rel);
+ const pageHtml=fs.readFileSync(path.join(root,entry.page),'utf8');
+ const english=entry.title_en.replaceAll('&','&amp;');
+ assert.ok(pageHtml.includes(entry.title_zh),'Standalone page missing Chinese title: '+entry.version);
+ assert.ok(pageHtml.includes(entry.title_en)||pageHtml.includes(english),'Standalone page missing English title: '+entry.version);
+ assert.ok(pageHtml.includes('class="release-story zh"')&&pageHtml.includes('class="release-story en"'),'Missing bilingual release body: '+entry.version);
+ assert.ok(archiveHtml.includes('href="'+entry.version+'.html"'),'Release archive index missing link: '+entry.version);
+}
+
 console.log('PASS Muse single HTML: 35 guides, 3 releases, 11-macro glossary, 48 SVGs, 0 embedded PNG exports, '+Object.keys(assets).length+' GitHub image URLs');
