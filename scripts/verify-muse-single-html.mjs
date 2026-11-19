@@ -97,6 +97,13 @@ assert.match(site.routes.m7.caution,/不等于所有个人免费抽取资格/,'C
 assert.match(site.routes.m16.summary,/14种精钢军械/,'Newly craftable steel count missing');
 assert.match(site.routes.status.summary,/工坊/,'Workshop status missing');
 assert.match(site.routes.status.summary,/显示名/,'Descriptor version and display name must be distinguished');
+const currentVersion='V'+archive.current;
+for (const [label, copy] of Object.entries({zhSummary:site.routes.status.summary,enSummary:site.routes.status.en.summary,enBody:site.routes.status.en.narrative[0]})) {
+ assert.ok(copy.includes(currentVersion),'Status copy is out of sync: '+label);
+}
+const standaloneStatus=fs.readFileSync(path.join(root,'topics/status.html'),'utf8');
+assert.ok(standaloneStatus.includes(site.routes.status.en.narrative[0]),'Standalone English status body is out of sync');
+for(const p of ['topics/status.html','topics/m21.html']) assert.doesNotMatch(fs.readFileSync(path.join(root,p),'utf8'),/V\d+(?:\.\d+)+ main<\/span>/,'Avoid a hardcoded release baseline in the static hero: '+p);
 assert.ok(!site.routes.unknown.story.includes('且未婚未成阿斯塔特'),'Invented implantation marriage restriction');
 assert.match(site.routes.unknown.story,/未婚/,'FAQ correction needs explanatory context');
 
