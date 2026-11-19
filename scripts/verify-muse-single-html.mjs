@@ -18,7 +18,11 @@ const block=id=>{
 const site=block('site-data'),assets=block('asset-data'),icons=block('icon-data');
 assert.equal(Object.keys(site.routes).length,30,'Expected 30 site topic routes');
 assert.equal(site.professions.length,5,'Expected five professions');
-assert.equal(site.releases.length,3,'Expected three releases');
+assert.ok(site.releases.length >= 4,'Earlier releases and the maintenance release must remain available');
+assert.equal(new Set(site.releases.map(r=>r.id)).size,site.releases.length,'Duplicate version route');
+assert.ok(site.releases.slice(1).every((r,i)=>site.releases[i].date >= r.date),'Order releases newest first');
+assert.ok(html.includes('DATA.releases.slice(0,2).map(releaseCard)'),'Home must show the latest two releases');
+assert.ok(html.includes('esc(DATA.releases[0].version)'),'Footer must follow the current release');
 assert.equal(icons.meta.length,48,'Expected 48 original site icon definitions');
 assert.ok(!icons.ornamentPng,'Ornament PNG blobs should not be inline');
 assert.ok(!Object.keys(assets).some(x=>x.startsWith('png-')),'480 raster export copies must be removed');
@@ -91,7 +95,8 @@ assert.match(site.routes.m8.story,/蒙养学段考核/,'Academy hook milestone m
 assert.match(site.routes.m9.story,/召集加入战争/,'Knight mobilization should describe actual interaction');
 assert.match(site.routes.m7.caution,/不等于所有个人免费抽取资格/,'Covenant inheritance caveat missing');
 assert.match(site.routes.m16.summary,/14种精钢军械/,'Newly craftable steel count missing');
-assert.match(site.routes.status.summary,/main 描述文件仍为 V3\.1\.6/,'GitHub branch and Workshop status conflated');
+assert.match(site.routes.status.summary,/工坊/,'Workshop status missing');
+assert.match(site.routes.status.summary,/显示名/,'Descriptor version and display name must be distinguished');
 assert.ok(!site.routes.unknown.story.includes('且未婚未成阿斯塔特'),'Invented implantation marriage restriction');
 assert.match(site.routes.unknown.story,/未婚/,'FAQ correction needs explanatory context');
 
@@ -109,4 +114,4 @@ for(const expr of [
 ])assert.ok(filterSource.includes(expr),'Compendium iteration must use $$: '+expr);
 assert.ok(!/(^|[^$])\$\([^\n]+\)\.forEach/m.test(filterSource),'Single-element helper $ cannot be iterated');
 
-console.log('PASS Muse single HTML: 35 guides, 3 releases, 11-macro glossary, 48 SVGs, 0 embedded PNG exports, '+Object.keys(assets).length+' GitHub image URLs');
+console.log('PASS Muse single HTML: 35 guides, '+site.releases.length+' releases, 11-macro glossary, 48 SVGs, 0 embedded PNG exports, '+Object.keys(assets).length+' GitHub image URLs');

@@ -54,13 +54,12 @@ This repository contains the **bilingual showcase website and public-facing visu
 
 ## 当前版本 / Current Release
 
-**V3.1.6.1「泉水之龙」 / Spring Dragon (2026-11-14)**
+**V3.1.6.2「宝物升华、人物招募与学院」 / Artifact Ascension, Recruitment & Academy (2026-11-18)**
 
-- 新增华夏传承的泉水之裔与传说职业龙角外观；龙角无额外属性，角型取决于特征和身份。
-- 新增游戏规则显示范围；必须先启用「外貌与特征 → 泉水之裔外貌」。
-- 儿童无 18 岁显示门槛，但角型不随年龄自动升级；旧档、继承及冠饰适配仍需实机验证。
-- [查看版本更新目录 / Version history](versions/README.md) · [V3.1.6.1 完整公告 / Full release note](versions/3.1.6.1.md) · [八图实机展示 / In-game collage](assets/releases/3.1.6.1/dragon-horns-gallery.avif)。
-- **V3.1.6 和 V3.1.5 原公告均保留**，网站首页只展示最新两版，全部历史版本在独立版本目录中查看。
+- 宝物定型保留原类型，五连与十连不再招募已故候选，圣泉学院把奖励所需的属性和门槛标得更清楚。
+- Reforged artifacts keep their original type, five- and ten-draw recruitment skips deceased candidates, and Academy progress displays its stat requirements more clearly.
+- [本版公告 / Release notes](versions/3.1.6.2.md) · [静态页面 / Player page](versions/3.1.6.2.html) · [版本目录 / Version history](versions/index.html)
+- [V3.1.6.1 龙角公告与八张实机图 / Spring Dragon archive and gallery](versions/3.1.6.1.html)。首页只展示最新两版，早期公告保留在版本目录。
 
 **Important:** The GitHub repository stores source files and public assets. Updating GitHub does **not** automatically publish changes to the Muse-hosted live site.
 
@@ -99,7 +98,7 @@ Large artwork and CK3 PNG references load from GitHub. The Muse single-file guid
 
 **图标回审 / Icon audit:** [色彩图例、虔诚变体与 UI 扁平图标](topics/resources.html) · [静态检查](topics/verify-wiki.mjs)。
 
-**玩家版更新日志 / Player-readable releases:** [独立版本目录](versions/index.html) · [V3.1.6.1 泉水之龙](versions/3.1.6.1.html) · [V3.1.6 余烬不熄](versions/3.1.6.html)。
+**玩家版更新日志 / Player-readable releases:** [独立版本目录](versions/index.html) · [V3.1.6.2 宝物升华、人物招募与学院](versions/3.1.6.2.html) · [V3.1.6.1 泉水之龙](versions/3.1.6.1.html) · [V3.1.6 余烬不熄](versions/3.1.6.html)。
 
 
 **Muse 单文件发布 / Single-file publishing:** [发布约定与回归清单](MUSE_SINGLE_HTML.md) · [静态校验脚本](scripts/verify-muse-single-html.mjs)。
